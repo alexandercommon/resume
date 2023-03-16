@@ -1,0 +1,12 @@
+# Site settings
+title: Alex Common Resume
+email: email@alexc.wtf
+description: > 
+  Alex Common resume
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "http://resume.alexc.wtf" # the base hostname & protocol for your site
+github_username:  alexandercommon
+
+# Build settings
+# markdown: kramdown
+# permalink: /:year/:title:output_ext
