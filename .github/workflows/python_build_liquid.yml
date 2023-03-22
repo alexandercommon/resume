@@ -1,6 +1,6 @@
 name: Generate HTML using Liquid and Python
 
-on: workflow_dispatch
+on: workflow_dispatch:
 
 jobs:
   build:
