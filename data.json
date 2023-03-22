@@ -12,7 +12,7 @@
 			"countryCode": "US",
 			"region": "Michigan"
 		},
-		"soft_skills" : [
+		"soft_skills": [
 			"Customer service",
 			""
 		]
@@ -24,14 +24,14 @@
 			"endDate": "current",
 			"summary": "Primary responsibilities include upgrading and maintaining the OnStar billing systems. Also, researching potential improvements, creating and maintaining documentation, and corporate compliance. Worked in a close-knit team oriented environment. Delivering objects under tight deadlines in fast-paced, client-oriented environment",
 			"highlights": [
-			  "Automated month-end billing process",
-			  "Designed an implemented HTML invoice templates for middle-east",
-			  "Converted old MS Word invoices into HTML & Liquid",
-			  "Co-implemented tax reporting workflow for Mexico",
-			  "Automated product catalog comparison",
-			  "Improved Linux SSH login practices",
-			  "Improved consumer personal information handling",
-			  "Improved workflow error reporting procedure"
+				"Automated month-end billing process",
+				"Designed an implemented HTML invoice templates for middle-east",
+				"Converted old MS Word invoices into HTML & Liquid",
+				"Co-implemented tax reporting workflow for Mexico",
+				"Automated product catalog comparison",
+				"Improved Linux SSH login practices",
+				"Improved consumer personal information handling",
+				"Improved workflow error reporting procedure"
 			]
 		}, {
 			"name": "Computer Science Corporation - Pratt & Whitney and Sikorsky accounts",
@@ -40,118 +40,117 @@
 			"endDate": "2016-04-02",
 			"summary": "Primary responsibilities include upgrading and maintaining the Solumina manufacturing execution system",
 			"highlights": [
-			  "Implemented an automated patching script, freeing developers from making SQL patches manually.",
-			  "Solved a number of problems previously thought unsolvable. Including methods to change user input screens on-the-fly, overcoming out-of-the-box limitations.",
-			  "Discovered, implemented and maintained solution to display webpages within manufacturing program."
+				"Implemented an automated patching script, freeing developers from making SQL patches manually.",
+				"Solved a number of problems previously thought unsolvable. Including methods to change user input screens on-the-fly, overcoming out-of-the-box limitations.",
+				"Discovered, implemented and maintained solution to display webpages within manufacturing program."
 			]
 		}, {
 			"name": "University of Michigan - Flint",
 			"position": "Teacher's Assisitant - Digital Logic, and Programming classes",
 			"startDate": "2010",
-			"endDate": "2012",
+			"endDate": "2012"
 		}, {
 			"name": "University of Michigan - Flint",
 			"position": "IT Helpdesk - Desktop Support",
 			"startDate": "2009",
-			"endDate": "2011",
+			"endDate": "2011"
 		}, {
 			"name": "Retail, various",
 			"position": "Sales, customer service, checkout, etc.",
 			"startDate": "2003",
-			"endDate": "2009",
-		}		
-	
+			"endDate": "2009"
+		}
+
 	],
 	"volunteer": [{
-			"organization": "Mr. Peace Inc.",
-			"position": "Digital logitstics, media production, & marketting",
-			"url": "https://mrpeace.org/",
-			"startDate": "2015-02-11",
-			"endDate": "current",
-			"summary": "Development and implementation of marketting strategies, including photography, audio recording, video recording, etc. Website development and maintenance. Business strategy and growth brainstorming. And general assistance.",
-			"highlights": [
-				"Organized and centralized documentation and records",
-				"Created small-scale customer-resource management solution",
-				"Develeoped new website",
-				"Shot and created numerous music videos",
-				"Recorded numerous music albums",
-			]
-		}, {
-			"organization": "Ferndale Cat Shelter",
-			"position": "Customer Service",
-			"url": "https://ferndalecatshelter.org/",
-			"startDate": "2021-06-28",
-			"endDate": "current",
-			"summary": "Interact with visitors, answer any questions about the shelter and adoption, and ensure cats & visitors get along. Clean up and open if necessary. Occationally visitor check-in and cash register."
-		}, {
-			"organization": "Pet Adoption Alternative of Warren",
-			"position": "Cleaning & cat socialization",
-			"url": "https://paawarren.org/",
-			"startDate": "2021-04-21",
-			"endDate": "2023-03-17",
-		}, {
-			"organization": "Chabad House of Eastern Michigan",
-			"position": "Desktop support",
-			"url": "https://www.chabad.org/jewish-centers/117642/Flint/Synagogue/Chabad-House-Lubavitch-of-Eastern-Michigan",
-			"startDate": "2012",
-			"endDate": "current"
-		}
-	],
-  "education": [{
-    "institution": "University of Michigan Flint",
-    "url": "https://institution.com/",
-    "area": "Computer Science",
-    "studyType": "Bachelors of Science",
-    "startDate": "2007",
-    "endDate": "2012",
-  }, {
-    "institution": "University of Detroit Mercy",
-    "url": "https://institution.com/",
-    "area": "Architecture",
-    "studyType": "Changed majors",
-    "startDate": "2005",
-    "endDate": "2006",
-  }],
-  "skills": [{
-    "name": "Web Development",
-    "level": "Master",
-    "keywords": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ]
-  }],
-  "languages": [{
-    "language": "English",
-    "fluency": "Native speaker"
-  }],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
-  "projects": [{
-    "name": "Project",
-    "description": "Description…",
-    "highlights": [
-      "Won award at AIHacks 2016"
-    ],
-    "keywords": [
-      "HTML"
-    ],
-    "startDate": "2019-01-01",
-    "endDate": "2021-01-01",
-    "url": "https://project.com/",
-    "roles": [
-      "Team Lead"
-    ],
-    "entity": "Entity",
-    "type": "application"
-  }]
+		"organization": "Mr. Peace Inc.",
+		"position": "Digital logitstics, media production, & marketting",
+		"url": "https://mrpeace.org/",
+		"startDate": "2015-02-11",
+		"endDate": "current",
+		"summary": "Development and implementation of marketting strategies, including photography, audio recording, video recording, etc. Website development and maintenance. Business strategy and growth brainstorming. And general assistance.",
+		"highlights": [
+			"Organized and centralized documentation and records",
+			"Created small-scale customer-resource management solution",
+			"Develeoped new website",
+			"Shot and created numerous music videos",
+			"Recorded numerous music albums"
+		]
+	}, {
+		"organization": "Ferndale Cat Shelter",
+		"position": "Customer Service",
+		"url": "https://ferndalecatshelter.org/",
+		"startDate": "2021-06-28",
+		"endDate": "current",
+		"summary": "Interact with visitors, answer any questions about the shelter and adoption, and ensure cats & visitors get along. Clean up and open if necessary. Occationally visitor check-in and cash register."
+	}, {
+		"organization": "Pet Adoption Alternative of Warren",
+		"position": "Cleaning & cat socialization",
+		"url": "https://paawarren.org/",
+		"startDate": "2021-04-21",
+		"endDate": "2023-03-17"
+	}, {
+		"organization": "Chabad House of Eastern Michigan",
+		"position": "Desktop support",
+		"url": "https://www.chabad.org/jewish-centers/117642/Flint/Synagogue/Chabad-House-Lubavitch-of-Eastern-Michigan",
+		"startDate": "2012",
+		"endDate": "current"
+	}],
+	"education": [{
+		"institution": "University of Michigan Flint",
+		"url": "https://institution.com/",
+		"area": "Computer Science",
+		"studyType": "Bachelors of Science",
+		"startDate": "2007",
+		"endDate": "2012"
+	}, {
+		"institution": "University of Detroit Mercy",
+		"url": "https://institution.com/",
+		"area": "Architecture",
+		"studyType": "Changed majors",
+		"startDate": "2005",
+		"endDate": "2006"
+	}],
+	"skills": [{
+		"name": "Web Development",
+		"level": "Master",
+		"keywords": [
+			"HTML",
+			"CSS",
+			"JavaScript"
+		]
+	}],
+	"languages": [{
+		"language": "English",
+		"fluency": "Native speaker"
+	}],
+	"interests": [{
+		"name": "Wildlife",
+		"keywords": [
+			"Ferrets",
+			"Unicorns"
+		]
+	}],
+	"references": [{
+		"name": "Jane Doe",
+		"reference": "Reference…"
+	}],
+	"projects": [{
+		"name": "Project",
+		"description": "Description…",
+		"highlights": [
+			"Won award at AIHacks 2016"
+		],
+		"keywords": [
+			"HTML"
+		],
+		"startDate": "2019-01-01",
+		"endDate": "2021-01-01",
+		"url": "https://project.com/",
+		"roles": [
+			"Team Lead"
+		],
+		"entity": "Entity",
+		"type": "application"
+	}]
 }
