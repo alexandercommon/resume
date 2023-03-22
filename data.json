@@ -1,0 +1,173 @@
+{
+	"basics": {
+		"name": "Alexander Common",
+		"label": "Programmer",
+		"image": "",
+		"email": "alexander.a.common@gmail.com",
+		"phone": "810-624-0639",
+		"summary": "An information technology professional with 14 years experience. Specializing in process improvement, documentation, requirement gathering & analysis, and automation.",
+		"location": {
+			"city": "Ferndale",
+			"postalCode": "48220",
+			"countryCode": "US",
+			"region": "Michigan"
+		}
+		"soft_skills" : [
+			"Customer service",
+			""
+		]
+	},
+	"work": [{
+			"name": "GM / Onstar - Global Billing Resources Management ",
+			"position": "Software Developer",
+			"startDate": "2016-05-02",
+			"endDate": "current",
+			"summary": "Primary responsibilities include upgrading and maintaining the OnStar billing systems. Also, researching potential improvements, creating and maintaining documentation, and corporate compliance. Worked in a close-knit team oriented environment. Delivering objects under tight deadlines in fast-paced, client-oriented environment",
+			"highlights": [
+			  "Automated month-end billing process",
+			  "Designed an implemented HTML invoice templates for middle-east",
+			  "Converted old MS Word invoices into HTML & Liquid",
+			  "Co-implemented tax reporting workflow for Mexico",
+			  "Automated product catalog comparison",
+			  "Improved Linux SSH login practices",
+			  "Improved consumer personal information handling",
+			  "Improved workflow error reporting procedure"
+			]
+		}, {
+			"name": "Computer Science Corporation - Pratt & Whitney and Sikorsky accounts",
+			"position": "Software Developer",
+			"startDate": "2012-06-12",
+			"endDate": "2016-04-02",
+			"summary": "Primary responsibilities include upgrading and maintaining the Solumina manufacturing execution system",
+			"highlights": [
+			  "Implemented an automated patching script, freeing developers from making SQL patches manually.",
+			  "Solved a number of problems previously thought unsolvable. Including methods to change user input screens on-the-fly, overcoming out-of-the-box limitations.",
+			  "Discovered, implemented and maintained solution to display webpages within manufacturing program."
+			]
+		}, {
+			"name": "University of Michigan - Flint",
+			"position": "Teacher's Assisitant - Digital Logic, and Programming classes",
+			"startDate": "2010",
+			"endDate": "2012",
+		}, {
+			"name": "University of Michigan - Flint",
+			"position": "IT Helpdesk - Desktop Support",
+			"startDate": "2009",
+			"endDate": "2011",
+		}, {
+			"name": "Retail, various",
+			"position": "Sales, customer service, checkout, etc.",
+			"startDate": "2003",
+			"endDate": "2009",
+		}		
+	
+	],
+	"volunteer": [{
+			"organization": "Mr. Peace Inc.",
+			"position": "Digital logitstics, media production, & marketting",
+			"url": "https://mrpeace.org/",
+			"startDate": "2015-02-11",
+			"endDate": "current",
+			"summary": "Development and implementation of marketting strategies, including photography, audio recording, video recording, etc. Website development and maintenance. Business strategy and growth brainstorming. And general assistance.",
+			"highlights": [
+				"Organized and centralized documentation and records",
+				"Created small-scale customer-resource management solution",
+				"Develeoped new website",
+				"Shot and created numerous music videos",
+				"Recorded numerous music albums",
+			]
+		}, {
+			"organization": "Ferndale Cat Shelter",
+			"position": "Customer Service",
+			"url": "https://ferndalecatshelter.org/",
+			"startDate": "2021-06-28",
+			"endDate": "current",
+			"summary": "Interact with visitors, answer any questions about the shelter and adoption, and ensure cats & visitors get along. Clean up and open if necessary. Occationally visitor check-in and cash register."
+		}, {
+			"organization": "Pet Adoption Alternative of Warren",
+			"position": "Cleaning & cat socialization",
+			"url": "https://paawarren.org/",
+			"startDate": "2021-04-21",
+			"endDate": "2023-03-17",
+		}, {
+			"organization": "Chabad House of Eastern Michigan",
+			"position": "Desktop support",
+			"url": "https://www.chabad.org/jewish-centers/117642/Flint/Synagogue/Chabad-House-Lubavitch-of-Eastern-Michigan",
+			"startDate": "2012",
+			"endDate": "current"
+		}
+	],
+  "education": [{
+    "institution": "University",
+    "url": "https://institution.com/",
+    "area": "Software Development",
+    "studyType": "Bachelor",
+    "startDate": "2011-01-01",
+    "endDate": "2013-01-01",
+    "score": "4.0",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "certificates": [{
+    "name": "Certificate",
+    "date": "2021-11-07",
+    "issuer": "Company",
+    "url": "https://certificate.com"
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Master",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  }],
+  "languages": [{
+    "language": "English",
+    "fluency": "Native speaker"
+  }],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [{
+    "name": "Project",
+    "description": "Description…",
+    "highlights": [
+      "Won award at AIHacks 2016"
+    ],
+    "keywords": [
+      "HTML"
+    ],
+    "startDate": "2019-01-01",
+    "endDate": "2021-01-01",
+    "url": "https://project.com/",
+    "roles": [
+      "Team Lead"
+    ],
+    "entity": "Entity",
+    "type": "application"
+  }]
+}
