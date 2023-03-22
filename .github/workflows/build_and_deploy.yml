@@ -33,4 +33,4 @@ jobs:
           python -m pip install liquidpy
       - name: Build file
         run: |
-          python 'print("line1")\nprint("line2")'
+          python -c 'print("line1")\nprint("line2")'
