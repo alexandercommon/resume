@@ -25,7 +25,18 @@ jobs:
       run: |
         python3 - << EOF
         import json
+        import os
         from liquid import Liquid
+
+        # Check if the JSON data file exists
+        if not os.path.isfile('data.json'):
+            print('Error: data file not found')
+            exit()
+
+        # Check if the Liquid template file exists
+        if not os.path.isfile('template.html'):
+            print('Error: template file not found')
+            exit()
 
         # Load the JSON data from a file
         with open('data.json') as f:
@@ -40,4 +51,5 @@ jobs:
         # Write the rendered output to an HTML file
         with open('index.html', 'w') as f:
             f.write(new_site)
+
         EOF
