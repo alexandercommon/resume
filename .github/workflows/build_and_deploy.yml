@@ -33,6 +33,6 @@ jobs:
           python -m pip install liquidpy
       - name: Build file
         run: |
-          CODE='print("line1")
-          print("line2")'
+          CODE="print('line1')
+          print('line2')"
           python -c $CODE
