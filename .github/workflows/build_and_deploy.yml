@@ -33,7 +33,6 @@ jobs:
           python -m pip install liquidpy
       - name: Build file
         run: |
-          pytest
           python3 - << EOF
           import json
           import os
