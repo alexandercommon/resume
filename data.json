@@ -1,7 +1,7 @@
 {
 	"basics": {
 		"name": "Alexander Common",
-		"label": "Programmer",
+		"label": "Software Developer",
 		"image": "",
 		"email": "alexander.a.common@gmail.com",
 		"phone": "810-624-0639",
@@ -11,7 +11,7 @@
 			"postalCode": "48220",
 			"countryCode": "US",
 			"region": "Michigan"
-		}
+		},
 		"soft_skills" : [
 			"Customer service",
 			""
@@ -98,35 +98,19 @@
 		}
 	],
   "education": [{
-    "institution": "University",
+    "institution": "University of Michigan Flint",
     "url": "https://institution.com/",
-    "area": "Software Development",
-    "studyType": "Bachelor",
-    "startDate": "2011-01-01",
-    "endDate": "2013-01-01",
-    "score": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
+    "area": "Computer Science",
+    "studyType": "Bachelors of Science",
+    "startDate": "2007",
+    "endDate": "2012",
+  }, {
+    "institution": "University of Detroit Mercy",
+    "url": "https://institution.com/",
+    "area": "Architecture",
+    "studyType": "Changed majors",
+    "startDate": "2005",
+    "endDate": "2006",
   }],
   "skills": [{
     "name": "Web Development",
