@@ -49,31 +49,9 @@ jobs:
           python -m pip install liquidpy
       - name: Build file
         run: |
-          printf -v CODE 'import json
-          import os
-          from liquid import Liquid
-
-          # Check if the JSON data file exists
-          if not os.path.isfile('${{ inputs.json }}'):
-            print('Error: data file not found')
-            exit()
-
-          # Check if the Liquid template file exists
-          if not os.path.isfile('${{ inputs.template }}'):
-            print('Error: template file not found')
-            exit()
-
-          # Load the JSON data from a file
-          with open('data.json') as f:
-            data = json.load(f)
-
-          # Load the Liquid template from a file
-          template = Liquid('${{ inputs.template }}')
-
-          # Render the template with the JSON data
-          new_site = template.render(data)
-
-          # Write the rendered output to an HTML file
-          with open('${{ inputs.output }}', 'w') as f:
-            f.write(new_site)'
-            python -c $CODE
+          printf -v CODE 'print("line1")
+            print("line2")
+            if True:
+              print("line4")'
+          python -c "$CODE"
+              
