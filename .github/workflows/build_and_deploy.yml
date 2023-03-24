@@ -58,7 +58,7 @@ jobs:
         run: |
           AUTHOR_EMAIL=$(git log -1 --pretty=format:"%ae")
           AUTHOR_NAME=$(git log -1 --pretty=format:"%an")
-          
+          git add index.html
           git config --global user.email "${AUTHOR_EMAIL}"
           git config --global user.name "${AUTHOR_NAME}"
           git commit -m "Build $(date +'%F %R')"
