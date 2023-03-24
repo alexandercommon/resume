@@ -49,9 +49,6 @@ jobs:
           python -m pip install liquidpy
       - name: Build file
         run: |
-          printf -v CODE 'print("line1")
-            print("line2")
-            if True:
-              print("line4")'
+          printf -v CODE 'print("line1")\nprint("line2")\nif True:\n\tprint("line4")\n'
           python -c "$CODE"
               
