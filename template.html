@@ -255,7 +255,7 @@
 					<div class="summary">
 						<p>{{job.summary}}</p>
 					</div>
-					{% if skill.keywords %}
+					{% if job.highlights %}
 						<h4>Highlights</h4>
 						<ul class="highlights">
 		            		{% for highlight in job.highlights %}
@@ -292,7 +292,7 @@
 							<div class="summary">
 								<p>{{vol.summary}}</p>
 							</div>
-							{% if skill.keywords %}
+							{% if vol.highlights %}
 								<h4>Highlights</h4>
 								<ul class="highlights">
 				            		{% for highlight in vol.highlights %}
