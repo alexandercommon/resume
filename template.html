@@ -7,14 +7,11 @@
 	
 	<title>{{basics.name}}</title>
 	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css"-->
 	
 	<style type="text/css">
-	
-		@import url(
-			"https://fonts.googleapis.com/css?family=Lato:400,700"
-		);
+		@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 		body {
 			background: #fff;
 			font-family: Lato, sans-serif;
@@ -207,70 +204,181 @@
 		</div>
 	</header>
 	<div id="content" class="container">
-	<section id="contact" class="row">
-		<aside class="col-sm-3">
-			<h3>Contact</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<strong>Email</strong>
-				<div class="email">{{basics.email}}</div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Phone</strong>
-				<div class="phone">{{basics.phone}}</div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Website</strong>
-				<div class="website">
-					<a href="{{basics.website}}">{{basics.website}}</a>
+		<section id="contact" class="row">
+			<aside class="col-sm-3">
+				<h3>Contact</h3>
+			</aside>
+			<div class="col-sm-9">
+				<div class="row">
+				<div class="col-sm-6">
+					<strong>Email</strong>
+					<div class="email">{{basics.email}}</div>
+				</div>
+				<div class="col-sm-6">
+					<strong>Phone</strong>
+					<div class="phone">{{basics.phone}}</div>
+				</div>
+				<div class="col-sm-6">
+					<strong>Website</strong>
+					<div class="website">
+						<a href="{{.}}">{{basics.website}}</a>
+					</div>
+				</div>
 				</div>
 			</div>
+		</section>
+		<section id="about" class="row">
+			<aside class="col-sm-3">
+				<h3>About</h3>
+			</aside>
+			<div class="col-sm-9">
+				<p>{{basics.summary}}</p>
 			</div>
-		</div>
-	</section>
-	<section id="about" class="row">
-		<aside class="col-sm-3">
-			<h3>About</h3>
-		</aside>
-		<div class="col-sm-9">
-			<p>{{basics.summary}}</p>
-		</div>
-	</section>
-	<section id="work" class="row">
-		<aside class="col-sm-3">
-			<h3>Experience</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-  			{% for job in work %}
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>{{job.name}}</span>
-					<span class="date">
-						{{job.startDate}} — {{job.endDate}}
-					</span>
-				</h4>
-				<div class="position">
-					{{job.position}}
+		</section>
+		<section id="work" class="row">
+			<aside class="col-sm-3">
+				<h3>Experience</h3>
+			</aside>
+			<div class="col-sm-9">
+				<div class="row">
+	  			{% for job in work %}
+				<div class="col-sm-12">
+					<h4 class="strike-through">
+						<span>{{job.name}}</span>
+						<span class="date">
+							{{job.startDate}} — {{job.endDate}}
+						</span>
+					</h4>
+					<div class="position">
+						{{job.position}}
+					</div>
+					<div class="summary">
+						<p>{{job.summary}}</p>
+					</div>
+					{% if skill.keywords %}
+						<h4>Highlights</h4>
+						<ul class="highlights">
+		            		{% for highlight in job.highlights %}
+							<li class="bullet">{{highlight}}</li>
+		            		{% endfor %}
+						</ul>
+					{% endif %}
 				</div>
-				<div class="summary">
-					<p>{{job.summary}}</p>
+				{% endfor %}
 				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-            		{% for highlight in job.highlights %}
-					<li class="bullet">{{highlight}}</li>
-            		{% endfor %}
-				</ul>
 			</div>
-			{% endfor %}
+		</section>
+		<section id="volunteer" class="row">
+			<aside class="col-sm-3">
+				<h3>Volunteer</h3>
+			</aside>
+			<div class="col-sm-9">
+				<div class="row">
+					{% for vol in volunteer %}
+						<div class="col-sm-12">
+							<h4 class="strike-through">
+								<span>{{vol.organization}}</span>
+								<span class="date">
+									{{vol.startDate}} — {{vol.endDate}}
+								</span>
+							</h4>
+							
+							<div class="website pull-right">
+								<a href="{{.}}">{{vol.website}}</a>
+							</div>
+							<div class="position">
+								{{vol.position}}
+							</div>
+							<div class="summary">
+								<p>{{vol.summary}}</p>
+							</div>
+							{% if skill.keywords %}
+								<h4>Highlights</h4>
+								<ul class="highlights">
+				            		{% for highlight in vol.highlights %}
+									<li class="bullet">{{highlight}}</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+		
+		<section id="education" class="row">
+			<aside class="col-sm-3">
+				<h3>Education</h3>
+			</aside>
+			<div class="col-sm-9">
+				<div class="row">
+					{% for edu in education %}
+						<div class="col-sm-12">
+							<h4 class="strike-through">
+								<span>{{edu.institution}}</span>
+								<span class="date">
+									{{edu.startDate}} — {{edu.endDate}}
+								</span>
+							</h4>
+							<div class="area">
+								{{edu.area}}
+							</div>
+							<div class="studyType">
+								{{edu.studyType}}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		
+		<section id="skills" class="row">
+			<aside class="col-sm-3">
+				<h3>Skills</h3>
+			</aside>
+			<div class="col-sm-9">
+				<div class="row">
+					{% for skill in skills %}
+						<div class="col-sm-6">
+							<div class="name">
+								<h4>{{skill.name}}</h4>
+							</div>
+							{% if skill.keywords %}
+							<ul class="keywords">
+								{% for keyword in skill.keywords %}
+									<li>{{keyword}}</li>
+								{% endfor %}
+							</ul>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
 
+		<section id="interests" class="row">
+			<aside class="col-sm-3">
+				<h3>Interests</h3>
+			</aside>
+			<div class="col-sm-9">
+				<div class="row">
+					{% for int in interests %}
+						<div class="col-sm-6">
+							<div class="name">
+								<h4>{{int.name}}</h4>
+							</div>
+							{% if int.keywords %}
+							<ul class="keywords">
+								{% for keyword in int.keywords %}
+								<li>{{keyword}}</li>
+								{% endfor %}
+							</ul>
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
 	</div>
-	
 	</body>
 </html>
