@@ -56,8 +56,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.email "your_email@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.name "Alex Common" 
           git commit -m "Build $(date +'%F %R')"
 
       - name: Push changes
