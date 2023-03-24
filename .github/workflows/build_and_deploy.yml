@@ -59,6 +59,20 @@ jobs:
           name: new-index
           path: ./index.html
 
+      - name: Commit changes
+        run: |
+          git config --global user.email "your_email@example.com"
+          git config --global user.name "Your Name"
+          git add hello.txt
+          git commit -m "Build $(date +'%F %R')"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+
+
   deploy:
     needs: build
     environment:
