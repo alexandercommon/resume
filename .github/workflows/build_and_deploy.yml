@@ -51,8 +51,17 @@ jobs:
 
       - name: Build file
         run: |
-          printf -v CODE 'import json\nimport os\nfrom liquid import Liquid\nwith open("./${{ inputs.data }}") as f:\n data = json.load(f)\ndata["current_time"] = str(os.system("TZ=date")) + " " str(os.system("TZ=America/Detroit date"))\ntemplate = Liquid("./${{ inputs.template }}")\nnew_site = template.render(data)\nwith open("./${{ inputs.output }}", "w") as f:\n f.write(new_site)'
-          python -c "$CODE"
+          python -c '
+              import json
+              import os
+              from liquid import Liquid
+              with open("./${{ inputs.data }}") as f:
+               data = json.load(f)
+              data["current_time"] = str(os.system("TZ=date")) + " " + str(os.system("TZ=America/Detroit date"))
+              template = Liquid("./${{ inputs.template }}")
+              new_site = template.render(data)
+              with open("./${{ inputs.output }}", "w") as f:
+               f.write(new_site)'
 
       - name: Commit changes
         run: |
