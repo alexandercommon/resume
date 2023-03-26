@@ -26,6 +26,13 @@ on:
       - 'data.json'
       - 'template.html'
 
+
+env:
+  if: inputs.data == null && index.output == null && inputs.template == null 
+  inputs.data: data.json
+  inputs.output: index.html
+  inputs.template: template.html
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: write
