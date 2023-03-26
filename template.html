@@ -526,7 +526,7 @@
 	
 	<div class="container" id="footer">
 	  <footer class="py-3 mt-4">
-	    <p class="text-center text-body-secondary p-5">Updated {{"now" | in_time_zone: "America/Detroit" | date: "%Y-%m-%d %H:%M %Z"}}</p>
+	    <p class="text-center text-body-secondary p-5">Updated {{ time.now|timezone('America/New_York') }}</p>
 	  </footer>
 	</div>
 	
