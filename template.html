@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 	<head>
@@ -7,8 +8,8 @@
 	
 	<title>{{basics.name}}</title>
 	
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css"-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
 	
 	<style type="text/css">
 		@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
@@ -184,6 +185,7 @@
 				display: none;
 			}
 		}
+
 	</style>
 	
 	</head>
@@ -204,181 +206,320 @@
 		</div>
 	</header>
 	<div id="content" class="container">
-		<section id="contact" class="row">
-			<aside class="col-sm-3">
-				<h3>Contact</h3>
-			</aside>
-			<div class="col-sm-9">
-				<div class="row">
-				<div class="col-sm-6">
-					<strong>Email</strong>
-					<div class="email">{{basics.email}}</div>
-				</div>
-				<div class="col-sm-6">
-					<strong>Phone</strong>
-					<div class="phone">{{basics.phone}}</div>
-				</div>
-				<div class="col-sm-6">
-					<strong>Website</strong>
-					<div class="website">
-						<a href="{{ basics.website }}">{{basics.website}}</a>
-					</div>
-				</div>
-				</div>
-			</div>
-		</section>
-		<section id="about" class="row">
-			<aside class="col-sm-3">
-				<h3>About</h3>
-			</aside>
-			<div class="col-sm-9">
-				<p>{{basics.summary}}</p>
-			</div>
-		</section>
-		<section id="work" class="row">
-			<aside class="col-sm-3">
-				<h3>Experience</h3>
-			</aside>
-			<div class="col-sm-9">
-				<div class="row">
-	  			{% for job in work %}
-				<div class="col-sm-12">
-					<h4 class="strike-through">
-						<span>{{job.name}}</span>
-						<span class="date">
-							{{job.startDate}} — {{job.endDate}}
-						</span>
-					</h4>
-					<div class="position">
-						{{job.position}}
-					</div>
-					<div class="summary">
-						<p>{{job.summary}}</p>
-					</div>
-					{% if job.highlights %}
-						<h4>Highlights</h4>
-						<ul class="highlights">
-		            		{% for highlight in job.highlights %}
-							<li class="bullet">{{highlight}}</li>
-		            		{% endfor %}
-						</ul>
-					{% endif %}
-				</div>
-				{% endfor %}
-				</div>
-			</div>
-		</section>
-		<section id="volunteer" class="row">
-			<aside class="col-sm-3">
-				<h3>Volunteer</h3>
-			</aside>
-			<div class="col-sm-9">
-				<div class="row">
-					{% for vol in volunteer %}
-						<div class="col-sm-12">
-							<h4 class="strike-through">
-								<span>{{vol.organization}}</span>
-								<span class="date">
-									{{vol.startDate}} — {{vol.endDate}}
-								</span>
-							</h4>
-							
-							<div class="website pull-right">
-								<a href="{{vol.website}}">{{vol.website}}</a>
-							</div>
-							<div class="position">
-								{{vol.position}}
-							</div>
-							<div class="summary">
-								<p>{{vol.summary}}</p>
-							</div>
-							{% if vol.highlights %}
-								<h4>Highlights</h4>
-								<ul class="highlights">
-				            		{% for highlight in vol.highlights %}
-									<li class="bullet">{{highlight}}</li>
-									{% endfor %}
-								</ul>
-							{% endif %}
-						</div>
-					{% endfor %}
-				</div>
-			</div>
-		</section>
-		
-		<section id="education" class="row">
-			<aside class="col-sm-3">
-				<h3>Education</h3>
-			</aside>
-			<div class="col-sm-9">
-				<div class="row">
-					{% for edu in education %}
-						<div class="col-sm-12">
-							<h4 class="strike-through">
-								<span>{{edu.institution}}</span>
-								<span class="date">
-									{{edu.startDate}} — {{edu.endDate}}
-								</span>
-							</h4>
-							<div class="area">
-								{{edu.area}}
-							</div>
-							<div class="studyType">
-								{{edu.studyType}}
-							</div>
-						</div>
-					{% endfor %}
-				</div>
-			</div>
-		</section>
-		
-		<section id="skills" class="row">
-			<aside class="col-sm-3">
-				<h3>Skills</h3>
-			</aside>
-			<div class="col-sm-9">
-				<div class="row">
-					{% for skill in skills %}
-						<div class="col-sm-6">
-							<div class="name">
-								<h4>{{skill.name}}</h4>
-							</div>
-							{% if skill.keywords %}
-							<ul class="keywords">
-								{% for keyword in skill.keywords %}
-									<li>{{keyword}}</li>
-								{% endfor %}
-							</ul>
-							{% endif %}
-						</div>
-					{% endfor %}
-				</div>
-			</div>
-		</section>
 
-		<section id="interests" class="row">
-			<aside class="col-sm-3">
-				<h3>Interests</h3>
-			</aside>
-			<div class="col-sm-9">
-				<div class="row">
-					{% for int in interests %}
-						<div class="col-sm-6">
-							<div class="name">
-								<h4>{{int.name}}</h4>
-							</div>
-							{% if int.keywords %}
-							<ul class="keywords">
-								{% for keyword in int.keywords %}
-								<li>{{keyword}}</li>
-								{% endfor %}
-							</ul>
-							{% endif %}
-						</div>
-					{% endfor %}
+	<section id="contact" class="row">
+		<aside class="col-sm-3">
+			<h3>Contact</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<strong>Email</strong>
+				<div class="email">{{basics.email}}</div>
+			</div>
+			<div class="col-sm-6">
+				<strong>Phone</strong>
+				<div class="phone">{{basics.phone}}</div>
+			</div>
+			<div class="col-sm-6">
+				<strong>Website</strong>
+				<div class="website">
+					<a href="http://richardhendricks.com">{{basics.website}}</a>
 				</div>
 			</div>
-		</section>
+			</div>
+		</div>
+	</section>
+	<section id="about" class="row">
+		<aside class="col-sm-3">
+			<h3>About</h3>
+		</aside>
+		<div class="col-sm-9">
+			<p>{{basics.summary}}</p>
+		</div>
+	</section>
+	<section id="profiles" class="row">
+		<aside class="col-sm-3">
+			<h3>Profiles</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-sm-6">
+					<strong class="network">
+						Twitter
+					</strong>
+					<div class="username">
+							neutralthoughts
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<strong class="network">
+						SoundCloud
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://soundcloud.com/dandymusicnl">dandymusicnl</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="work" class="row">
+		<aside class="col-sm-3">
+			<h3>Work</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			{% for job in work %}
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>{{job.name}}</span>
+					<span class="date">
+						{{job.startDate}} — {{job.endDate}}
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="http://piedpiper.com">http://piedpiper.com</a>
+				</div>
+				<div class="position">
+					{{job.position}}
+				</div>
+				<div class="summary">
+					<p>{{job.summary}}</p>
+				</div>
+				{% if job.highlights %}
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					{% for highlight in job.highlights %}
+					<li class="bullet">{{highlight}}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</div>
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section id="volunteer" class="row">
+		<aside class="col-sm-3">
+			<h3>Volunteer</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			{% for vol in volunteer %}
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>{{vol.organization}}</span>
+					<span class="date">
+						{{vol.startDate}} — {{vol.endDate}}
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="{{vol.website}}">{{vol.website}}</a>
+				</div>
+				<div class="position">
+					{{vol.position}}
+				</div>
+				<div class="summary">
+					<p>{{vol.summary}}</p>
+				</div>
+				{% if vol.highlights %}
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					{% for highlight in vol.highlights %}
+					<li class="bullet">{{highlight}}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</div>
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+	
+	<section id="education" class="row">
+		<aside class="col-sm-3">
+			<h3>Education</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			{% for edu in education %}
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>{{edu.institution}}</span>
+					<span class="date">
+						{{edu.startDate}} — {{edu.endDate}}
+					</span>
+				</h4>
+				<div class="area">
+					{{edu.area}}
+				</div>
+				<div class="studyType">
+					{{edu.studyType}}
+				</div>
+				<!--h4>Courses</h4>
+				<ul class="courses">
+					<li>DB1101 - Basic SQL</li>
+					<li>CS2011 - Java Introduction</li>
+				</ul-->
+			</div>
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+	
+	<!--section id="awards" class="row">
+		<aside class="col-sm-3">
+			<h3>Awards</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Digital Compression Pioneer Award</span>
+				</h4>
+				<div class="date pull-right">
+					<em>Awarded</em>
+					2014-11-01
+				</div>
+				<div class="awarder">
+					<em>by</em>
+					<strong>Techcrunch</strong>
+				</div>
+				<div class="summary">
+					There is no spoon.
+				</div>
+			</div>
+			</div>
+		</div>
+	</section-->
+	
+	<!--section id="publications" class="row">
+		<aside class="col-sm-3">
+			<h3>Publications</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Video compression for 3d media</span>
+					<span class="date">
+						2014-10-01
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"></a>
+				</div>
+				<div class="publisher">
+					<em>Published by</em>
+					<strong>Hooli</strong>
+				</div>
+				<div class="summary">
+					<p>Innovative middle-out compression algorithm that changes the way we store data.</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section-->
+	
+	<section id="skills" class="row">
+		<aside class="col-sm-3">
+			<h3>Skills</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			{% for skill in skills %}
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>{{skill.name}}<</h4>
+				</div>
+				{% if skill.keywords %}
+				<ul class="keywords">
+					{% for keyword in skill.keywords %}
+					<li>{{keyword}}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Compression</h4>
+				</div>
+				<ul class="keywords">
+					<li>Mpeg</li>
+					<li>MP4</li>
+					<li>GIF</li>
+				</ul>
+			</div>
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<!--section id="languages" class="row">
+		<aside class="col-sm-3">
+			<h3>Languages</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="language">
+					<strong>English</strong>
+				</div>
+				<div class="fluency">
+					Native speaker
+				</div>
+			</div>
+			</div>
+		</div>
+	</section-->
+
+	<section id="interests" class="row">
+		<aside class="col-sm-3">
+			<h3>Interests</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			{% for int in interests %}
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>{{int.name}}</h4>
+				</div>
+				{% if int.keywords %}
+				<ul class="keywords">
+				{% for keyword in int.keywords %}
+					<li>{{keyword}}</li>
+				{% endfor %}
+				</ul>
+				{% endif %}
+			</div>
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+	
+	<!--section id="references" class="row">
+		<aside class="col-sm-3">
+			<h3>References</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<blockquote class="reference">
+					<p>It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company.</p>
+					<p class="name">
+						<strong>— Erlich Bachman</strong>
+					</p>
+				</blockquote>
+			</div>
+			</div>
+		</div>
+	</section-->
+
 	</div>
+	
 	</body>
 </html>
