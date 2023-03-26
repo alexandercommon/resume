@@ -2,24 +2,6 @@
 name: Build and deploy to static pages
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-    inputs:
-      data:
-        description: 'Data file'
-        required: true
-        type: string
-        default: 'data.json'
-      output:
-        description: 'Output file'
-        required: true
-        type: string
-        default: 'index.html'
-      template:
-        description: 'Template file'
-        required: true
-        type: string
-        default: 'template.html'
   push:
     paths:
       - '.github/workflows/build_and_deploy.yml'
@@ -28,7 +10,6 @@ on:
 
 
 env:
-  if: inputs.data == null && index.output == null && inputs.template == null 
   inputs.data: data.json
   inputs.output: index.html
   inputs.template: template.html
