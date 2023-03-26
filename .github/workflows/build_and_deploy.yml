@@ -38,15 +38,14 @@ jobs:
 
       - name: Build file
         run: |
-          echo $('date')
-          echo $('TZ="America/Detroit" date')
+          echo "{date}=$('TZ="America/Detroit" date')" >> $GITHUB_ENV
           python -c '
           import json
           import os
           from liquid import Liquid
           with open("./data.json") as f:
            data = json.load(f)
-          data["current_time"] = str(os.system("TZ=date")) + " " + str(os.system("TZ=America/Detroit date"))
+          data["current_time"] = "${{ env.date }}"
           template = Liquid("./template.html")
           new_site = template.render(data)
           with open("./index.html", "w") as f:
