@@ -57,16 +57,16 @@ jobs:
       - name: Build file
         run: |
           python -c '
-              import json
-              import os
-              from liquid import Liquid
-              with open("./${{ inputs.data }}") as f:
-               data = json.load(f)
-              data["current_time"] = str(os.system("TZ=date")) + " " + str(os.system("TZ=America/Detroit date"))
-              template = Liquid("./${{ inputs.template }}")
-              new_site = template.render(data)
-              with open("./${{ inputs.output }}", "w") as f:
-               f.write(new_site)'
+          import json
+          import os
+          from liquid import Liquid
+          with open("./${{ inputs.data }}") as f:
+           data = json.load(f)
+          data["current_time"] = str(os.system("TZ=date")) + " " + str(os.system("TZ=America/Detroit date"))
+          template = Liquid("./${{ inputs.template }}")
+          new_site = template.render(data)
+          with open("./${{ inputs.output }}", "w") as f:
+           f.write(new_site)'
 
       - name: Commit changes
         run: |
