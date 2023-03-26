@@ -8,12 +8,6 @@ on:
       - 'data.json'
       - 'template.html'
 
-
-env:
-  data: data.json
-  output: index.html
-  template: template.html
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: write
@@ -48,12 +42,12 @@ jobs:
           import json
           import os
           from liquid import Liquid
-          with open("./${{ data }}") as f:
+          with open("./data.json") as f:
            data = json.load(f)
           data["current_time"] = str(os.system("TZ=date")) + " " + str(os.system("TZ=America/Detroit date"))
-          template = Liquid("./${{ template }}")
+          template = Liquid("./template.html")
           new_site = template.render(data)
-          with open("./${{ output }}", "w") as f:
+          with open("./index.html", "w") as f:
            f.write(new_site)'
 
       - name: Commit changes
