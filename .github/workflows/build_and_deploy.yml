@@ -39,6 +39,7 @@ jobs:
       - name: Build file
         run: |
           echo "date=$(TZ='America/Detroit' date)" >> $GITHUB_ENV
+          echo "${{ env.date }}"
           python -c '
           import json
           import os
