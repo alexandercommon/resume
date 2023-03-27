@@ -36,7 +36,7 @@
 			]
 		}, {
 			"name": "Computer Science Corporation",
-			"group": "Pratt & Whitney,and Sikorsky"
+			"group": "Pratt & Whitney,and Sikorsky",
 			"position": "Software Developer",
 			"startDate": "2012-06-12",
 			"endDate": "2016-04-02",
@@ -85,7 +85,7 @@
 		"endDate": "current",
 		"summary": "Interact with visitors, answer any questions about the shelter and adoption, and ensure cats & visitors get along. Clean up and open if necessary. Occationally visitor check-in and cash register."
 	}, {
-		"organization": "Pet Adoption Alternative of Warren",
+		"organization": "P.A.A.W.",
 		"position": "Cleaning & cat socialization",
 		"url": "https://paawarren.org/",
 		"startDate": "2021-04-21",
