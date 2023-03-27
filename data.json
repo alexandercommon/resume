@@ -93,20 +93,18 @@
 	}, {
 		"organization": "Chabad House of Eastern Michigan",
 		"position": "Desktop support",
-		"url": "https://www.chabad.org/jewish-centers/117642/Flint/Synagogue/Chabad-House-Lubavitch-of-Eastern-Michigan",
+		"url": "http://116.centers.chabad.org/",
 		"startDate": "2012",
 		"endDate": "current"
 	}],
 	"education": [{
 		"institution": "University of Michigan Flint",
-		"url": "https://institution.com/",
 		"area": "Computer Science",
 		"studyType": "Bachelors of Science",
 		"startDate": "2007",
 		"endDate": "2012"
 	}, {
 		"institution": "University of Detroit Mercy",
-		"url": "https://institution.com/",
 		"area": "Architecture",
 		"studyType": "Changed majors",
 		"startDate": "2005",
