@@ -38,16 +38,16 @@ jobs:
 
       - name: Build file
         run: |
-          echo "date=$(TZ='America/Detroit' date)" >> $GITHUB_ENV
-          echo "builddate=$(TZ='America/Detroit' && date +'%F %T')" >> $GITHUB_OUTPUT
-          echo "${{ env.date }}"
           python -c '
           import json
           import os
+          import datetime
+          import pytz
           from liquid import Liquid
           with open("./data.json") as f:
            data = json.load(f)
-          data["current_time"] = "${{ steps.version.outputs.builddate }}"
+          timezone = pytz.timezone('America/Detroit')
+          data["current_time"] = datetime.datetime.now(timezone).strftime('%Y-%m-%d %H:%M:%S %z')
           template = Liquid("./template.html")
           new_site = template.render(data)
           with open("./index.html", "w") as f:
