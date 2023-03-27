@@ -21,7 +21,7 @@
 			"name": "GM / Onstar",
 			"group": "Global Billing Resources",
 			"position": "Software Developer",
-			"startDate": "2016-05-02",
+			"startDate": "2016 May",
 			"endDate": "current",
 			"summary": "Primary responsibilities include upgrading and maintaining the OnStar billing systems. Also, researching potential improvements, creating and maintaining documentation, and corporate compliance. Worked in a close-knit team oriented environment. Delivering objects under tight deadlines in fast-paced, client-oriented environment",
 			"highlights": [
@@ -36,10 +36,10 @@
 			]
 		}, {
 			"name": "Computer Science Corporation",
-			"group": "Pratt & Whitney,and Sikorsky",
+			"group": "Pratt & Whitney, and Sikorsky",
 			"position": "Software Developer",
-			"startDate": "2012-06-12",
-			"endDate": "2016-04-02",
+			"startDate": "2012 Jun",
+			"endDate": "2016 Apr",
 			"summary": "Primary responsibilities include upgrading and maintaining the Solumina manufacturing execution system",
 			"highlights": [
 				"Implemented an automated patching script, freeing developers from making SQL patches manually.",
@@ -67,7 +67,7 @@
 		"organization": "Mr. Peace Inc.",
 		"position": "Digital logitstics, media production, & marketting",
 		"url": "https://mrpeace.org/",
-		"startDate": "2015-02-11",
+		"startDate": "2015 Feb",
 		"endDate": "current",
 		"summary": "Development and implementation of marketting strategies, including photography, audio recording, video recording, etc. Website development and maintenance. Business strategy and growth brainstorming. And general assistance.",
 		"highlights": [
@@ -81,15 +81,15 @@
 		"organization": "Ferndale Cat Shelter",
 		"position": "Customer Service",
 		"url": "https://ferndalecatshelter.org/",
-		"startDate": "2021-06-28",
+		"startDate": "2021 Jun",
 		"endDate": "current",
 		"summary": "Interact with visitors, answer any questions about the shelter and adoption, and ensure cats & visitors get along. Clean up and open if necessary. Occationally visitor check-in and cash register."
 	}, {
 		"organization": "P.A.A.W.",
 		"position": "Cleaning & cat socialization",
 		"url": "https://paawarren.org/",
-		"startDate": "2021-04-21",
-		"endDate": "2023-03-17"
+		"startDate": "2021 Apr",
+		"endDate": "2023 Mar"
 	}, {
 		"organization": "Chabad House of Eastern Michigan",
 		"position": "Desktop support",
