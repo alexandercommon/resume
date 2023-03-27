@@ -49,7 +49,6 @@
 			float: left;
 			margin-top: 6px;
 			margin-left: -20px;
-			opacity: .1;
 			position: absolute;
 		}
 		blockquote {
@@ -78,6 +77,9 @@
 		.col-sm-12 + .col-sm-12 {
 			margin-top: 30px;
 		}
+		section {
+			padding-top: 30px
+		}
 		footer {
 			background: #f4f6f6;
 			padding: 50px
@@ -86,7 +88,6 @@
 		#header {
 			background: #f4f6f6;
 			padding: 50px 0;
-			margin-bottom: 30px;
 		}
 		#header h2 {
 			color: #95a5a6;
@@ -142,7 +143,7 @@
 			}
 			.strike-through span:first-child {
 				padding-right: 20px;
-				margin-top: -12px;
+				margin-top: -15px;
 			}
 			.strike-through span + span {
 				font-size: 14px;
@@ -249,7 +250,7 @@
 					</span>
 				</h4>
 				<div class="position">
-					{{job.position}}{% if job.position %}&nbsp;|&nbsp;{{job.group}}{% endif %}
+					{{job.position}}{% if job.group %}&nbsp;|&nbsp;{{job.group}}{% endif %}
 				</div>
 				<div class="summary">
 					<p>{{job.summary}}</p>
@@ -399,7 +400,7 @@
 			{% for skill in skills %}
 			<div class="col-sm-6">
 				<div class="name">
-					<h4>{{skill.name}}<</h4>
+					<h4>{{skill.name}}</h4>
 				</div>
 				{% if skill.keywords %}
 				<ul class="keywords">
