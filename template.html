@@ -214,20 +214,14 @@
 		</aside>
 		<div class="col-sm-9">
 			<div class="row">
-			<div class="col-sm-6">
-				<strong>Email</strong>
-				<div class="email">{{basics.email}}</div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Phone</strong>
-				<div class="phone">{{basics.phone}}</div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Website</strong>
-				<div class="website">
-					<a href="http://richardhendricks.com">{{basics.website}}</a>
+				<div class="col-sm-6">
+					<strong>Email</strong>
+					<div class="email">{{basics.email}}</div>
 				</div>
-			</div>
+				<div class="col-sm-6">
+					<strong>Phone</strong>
+					<div class="phone">{{basics.phone}}</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -254,11 +248,8 @@
 						{{job.startDate}} — {{job.endDate}}
 					</span>
 				</h4>
-				<div class="website pull-right">
-					<a href="http://piedpiper.com">http://piedpiper.com</a>
-				</div>
 				<div class="position">
-					{{job.position}}
+					{{job.position}}{% if job.position %}&nbsp;|&nbsp;{{job.position}}{% endif %}
 				</div>
 				<div class="summary">
 					<p>{{job.summary}}</p>
