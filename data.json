@@ -18,7 +18,8 @@
 		]
 	},
 	"work": [{
-			"name": "GM / Onstar - Global Billing Resources Management ",
+			"name": "GM / Onstar",
+			"group": "Global Billing Resources",
 			"position": "Software Developer",
 			"startDate": "2016-05-02",
 			"endDate": "current",
@@ -34,7 +35,8 @@
 				"Improved workflow error reporting procedure"
 			]
 		}, {
-			"name": "Computer Science Corporation - Pratt & Whitney and Sikorsky accounts",
+			"name": "Computer Science Corporation",
+			"group": "Pratt & Whitney,and Sikorsky"
 			"position": "Software Developer",
 			"startDate": "2012-06-12",
 			"endDate": "2016-04-02",
@@ -55,8 +57,7 @@
 			"startDate": "2009",
 			"endDate": "2011"
 		}, {
-			"name": "Retail, various",
-			"position": "Sales, customer service, checkout, etc.",
+			"name": "Retail",
 			"startDate": "2003",
 			"endDate": "2009"
 		}
@@ -120,10 +121,6 @@
 			"JavaScript"
 		]
 	}],
-	"languages": [{
-		"language": "English",
-		"fluency": "Native speaker"
-	}],
 	"interests": [{
 		"name": "Wildlife",
 		"keywords": [
@@ -131,26 +128,4 @@
 			"Unicorns"
 		]
 	}],
-	"references": [{
-		"name": "Jane Doe",
-		"reference": "Reference…"
-	}],
-	"projects": [{
-		"name": "Project",
-		"description": "Description…",
-		"highlights": [
-			"Won award at AIHacks 2016"
-		],
-		"keywords": [
-			"HTML"
-		],
-		"startDate": "2019-01-01",
-		"endDate": "2021-01-01",
-		"url": "https://project.com/",
-		"roles": [
-			"Team Lead"
-		],
-		"entity": "Entity",
-		"type": "application"
-	}]
 }
