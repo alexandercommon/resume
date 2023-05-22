@@ -1,17 +1,573 @@
-<div id="g_id_onload"
-     data-client_id="329363457227-i28apbv49mk6es4e1rumhjf72m4lksjl.apps.googleusercontent.com"
-     data-context="signin"
-     data-ux_mode="popup"
-     data-login_uri="https://resume.alexc.wtf/edit.html"
-     data-itp_support="true">
-</div>
-
-<div class="g_id_signin"
-     data-type="standard"
-     data-shape="rectangular"
-     data-theme="outline"
-     data-text="signin_with"
-     data-size="large"
-     data-logo_alignment="left">
-</div>
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Basic JSON Editor Example</title>
+		<script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/dompurify@latest/dist/purify.min.js"></script>
+		<link  href="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/css/jsoneditor.min.css" rel="stylesheet">
+		<link  href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+		<!--link  href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet"-->
+		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+		<link  href="https://cdn.jsdelivr.net/npm/spectre.css@latest/dist/spectre-exp.min.css" rel="stylesheet">
+		<link  href="https://cdn.jsdelivr.net/npm/spectre.css@latest/dist/spectre.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/ace-builds@latest/src-noconflict/ace.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ace-builds@latest/src-noconflict/mode-javascript.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ace-builds@latest/src-noconflict/mode-json.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ace-builds@latest/src-noconflict/mode-sql.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ace-builds@latest/src-noconflict/theme-vibrant_ink.js"></script>
+		<style>
+			#editor_holder {
+				padding: 2vw;
+			}
+			.btn {
+				margin-left: 0.5em;
+				margin-right: 0.5em;
+			}
+			.json-editor-btn-save:after {
+				content: " Save changes";
+			}
+			.json-editor-btntype-delete:after {
+				content: " Delete";
+			}
+			.json-editor-btntype-deleteall:after {
+				content: " Delete All";
+			}
+			.json-editor-btntype-add:after {
+				content: " Add";
+			}
+			.json-editor-btntype-copy:after {
+				content: " Duplicate";
+			}
+			
+			.hide-table-header th {
+				display: none;
+			}
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		
+		<div id='editor_holder'></div>
+		
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				// Initialize the editor with a JSON schema
+				var editor = new JSONEditor(document.getElementById('editor_holder'),{
+					schema: resume_schema,
+					theme: 'spectre',
+					show_errors: 'interaction',
+					prompt_before_delete: true,
+					template: 'handlebars',
+					iconlib: 'fontawesome5',
+					remove_empty_properties: false,
+					disable_edit_json: true,
+					disable_collapse: true,
+					collapsed: false,
+					disable_properties: true,
+					enable_array_copy: true,
+					disable_array_delete_last_row: true,
+					array_controls_top: true,
+					prompt_before_delete: true,
+					lib_dompurify: true,
+					remove_button_labels: true
+				});
+				
+				editor.on('ready', function() {
+					var button = editor.root.getButton('Save changes', 'save', 'Save changes'),
+					button_holder = editor.root.theme.getHeaderButtonHolder();
+					button_holder.appendChild(button);
+					editor.root.header.parentNode.insertBefore(button_holder, editor.root.header.nextSibling);
+					
+					button.addEventListener('click', function(e) {
+						e.preventDefault();
+						console.log(editor.getValue());
+						
+					}, false);
+					
+					editor.getEditor('root.Advanced.Edit data directly').setValue(JSON.stringify(editor.getValue()));
+				});
+				
+				const updateJson = (e) => {
+					if (e.path !== 'root.Advanced.Edit data directly') {
+						editor.getEditor('root.Advanced.Edit data directly').setValue(JSON.stringify(editor.getValue()));
+					}
+				};
+				
+				function assignWatchers(schema, currentPath) {
+					Object.keys(schema.properties).forEach((property) => {
+						const propertyPath = currentPath ? `${currentPath}.${property}` : property;
+						if (propertyPath !== 'Advanced.Edit data directly') {
+							const subSchema = schema.properties[property];
+							if (subSchema.type === "object") {
+								assignWatchers(subSchema, propertyPath);
+								} else {
+								//editor.watch(propertyPath, onChange);
+								console.log(propertyPath);
+								console.log(subSchema);
+							}
+						}
+					});
+				}
+				assignWatchers(resume_schema, '');
+				
+				
+				
+				
+				
+			});
+		</script>
+		<script>
+			var resume_schema = {
+				"$schema": "http://json-schema.org/draft-04/schema#",
+				"type": "object",
+				"format": "categories",
+				"title": "Resume data",
+				"properties": {
+					"Personal Info": {
+						"type": "object",
+						"properties": {
+							"Name": {
+								"type": "string"
+							},
+							"Job title": {
+								"type": "string",
+								"description": "e.g. medical doctor"
+							},
+							"Image": {
+								"type": "string",
+								"description": "Link to image"
+							},
+							"Email": {
+								"type": "string",
+								"description": "e.g. thomas@gmail.com",
+								"format": "email"
+							},
+							"Phone": {
+								"type": "string"
+							},
+							"Website Link": {
+								"type": "string",
+								"format": "uri"
+							},
+							"General Summary": {
+								"type": "string",
+								"description": "Write a short 2-3 sentence biography about yourself"
+							},
+							"Address": {
+								"type": "object",
+								"additionalProperties": true,
+								"properties": {
+									"Street": {
+										"type": "string"
+									},
+									"City": {
+										"type": "string"
+									},
+									"State": {
+										"type": "string"
+									},
+									"Postal Code": {
+										"type": "string"
+									},
+									"Country": {
+										"type": "string"
+									}
+								},
+								"defaultProperties" : ["Street", "City", "State", "Postal Code", "Country"]
+							},
+							"Profile Links": {
+								"type": "array",
+								"format": "table",
+								"items": {
+									"type": "object",
+									"headerTemplate": "{{#if self.Site}}{{i1}}: {{self.Site}}{{else}}Profile {{i1}}{{/if}}",
+									"properties": {
+										"Site": {
+											"type": "string"
+										},
+										"Username": {
+											"type": "string"
+										},
+										"Link": {
+											"type": "string"
+										}
+									},
+									"defaultProperties": ["Site", "Username", "Link"]
+								}
+								
+							}
+						},
+						"defaultProperties": ["Name", "Job title", "Image", "Email", "Phone", "Website Link", "General Summary", "Address", "Profile Links"]
+					},
+					"Work experience": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Company Name]}}{{i1}}: {{self.[Company Name]}}{{else}}Job {{i1}}{{/if}}",
+							"properties": {
+								"Company Name": {
+									"type": "string",
+									"title": "Company Name",
+									"propertyOrder": 1
+								},
+								"Job title": {
+									"type": "string"
+								},
+								"Link": {
+									"type": "string"
+								},
+								"Star Date": {
+									"type": "string"
+								},
+								"End Date": {
+									"type": "string"
+								},
+								"Description": {
+									"type": "string"
+								},
+								"Highlights": {
+									"type": "array",
+									"format": "table",
+									"options": {
+										"containerAttributes": {
+											"class": "hide-table-header"
+										}
+									},
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"Volunteering": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Organization]}}{{i1}}: {{self.[Organization]}}{{else}}Volunterring {{i1}}{{/if}}",
+							"properties": {
+								"Organization": {
+									"type": "string"
+								},
+								"Job title": {
+									"type": "string"
+								},
+								"Link": {
+									"type": "string"
+								},
+								"Start Date": {
+									"type": "string"
+								},
+								"End Date": {
+									"type": "string"
+								},
+								"Description": {
+									"type": "string"
+								},
+								"Highlights": {
+									"type": "array",
+									"format": "table",
+									"options": {
+										"containerAttributes": {
+											"class": "hide-table-header"
+										}
+									},
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"Education": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[University]}}{{i1}}: {{self.[University]}}{{else}}Education {{i1}}{{/if}}",
+							"properties": {
+								"University": {
+									"type": "string"
+								},
+								"Link": {
+									"type": "string"
+								},
+								"Major": {
+									"type": "string"
+								},
+								"Degree Type": {
+									"type": "string"
+								},
+								"Start Date": {
+									"type": "string"
+								},
+								"End Date": {
+									"type": "string"
+								},
+								"GPA": {
+									"type": "string"
+								},
+								"Highlights": {
+									"type": "array",
+									"format": "table",
+									"options": {
+										"containerAttributes": {
+											"class": "hide-table-header"
+										}
+									},
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"Awards": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Title]}}{{i1}}: {{self.[Title]}}{{else}}Award {{i1}}{{/if}}",
+							"properties": {
+								"Title": {
+									"type": "string"
+								},
+								"Date": {
+									"type": "string"
+								},
+								"Awarded by": {
+									"type": "string"
+								},
+								"Description": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"Certificates": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Name]}}{{i1}}: {{self.[Name]}}{{else}}Cert {{i1}}{{/if}}",
+							"properties": {
+								"Name": {
+									"type": "string"
+								},
+								"Date": {
+									"type": "string"
+								},
+								"Issued by": {
+									"type": "string"
+								},
+								"Link": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"Publications": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Name]}}{{i1}}: {{self.[Name]}}{{else}}Publication {{i1}}{{/if}}",
+							"properties": {
+								"Name": {
+									"type": "string"
+								},
+								"Publisher": {
+									"type": "string"
+								},
+								"Release Date": {
+									"type": "string"
+								},
+								"Link": {
+									"type": "string"
+								},
+								"Description": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"Skills": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Skill area]}}{{i1}}: {{self.[Skill area]}}{{else}}Skill area {{i1}}{{/if}}",
+							"properties": {
+								"Skill area": {
+									"type": "string"
+								},
+								"Level": {
+									"type": "string"
+								},
+								"Specific skills": {
+									"type": "array",
+									"format": "table",
+									"options": {
+										"containerAttributes": {
+											"class": "hide-table-header"
+										}
+									},
+									"items": {
+										"type": "string",
+									}
+								}
+							}
+						}
+					},
+					"Languages": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Language]}}{{i1}}: {{self.[Language]}}{{else}}Language {{i1}}{{/if}}",
+							"properties": {
+								"Language": {
+									"type": "string"
+								},
+								"Fluency": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"Interests": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Interest area]}}{{i1}}: {{self.[Interest area]}}{{else}}Interest area {{i1}}{{/if}}",
+							"properties": {
+								"Interest area": {
+									"type": "string",
+									"description": "e.g. art, computers, car repair"
+								},
+								"Specific interests": {
+									"type": "array",
+									"format": "table",
+									"options": {
+										"containerAttributes": {
+											"class": "hide-table-header"
+										}
+									},
+									"items": {
+										"type": "string",
+										"description": "e.g. oil painting, C++ programming, oil changes"
+									}
+								}
+							}
+						}
+					},
+					"References": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Reference name]}}{{i1}}: {{self.[Reference name]}}{{else}}Reference {{i1}}{{/if}}",
+							"properties": {
+								"Reference name": {
+									"type": "string"
+								},
+								"Quote": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"Projects": {
+						"type": "array",
+						"format": "tabs-top",
+						"items": {
+							"type": "object",
+							"headerTemplate": "{{#if self.[Project Name]}}{{i1}}: {{self.[Project Name]}}{{else}}Project {{i1}}{{/if}}",
+							"properties": {
+								"Project Name": {
+									"type": "string"
+								},
+								"Description": {
+									"type": "string"
+								},
+								"Organization": {
+									"type": "string"
+								},
+								"Start date": {
+									"type": "string"
+								},
+								"End date": {
+									"type": "string"
+								},
+								"Link": {
+									"type": "string"
+								},
+								"Project type": {
+									"type": "string"
+								},
+								"Roles": {
+									"type": "array",
+									"format": "table",
+									"options": {
+										"containerAttributes": {
+											"class": "hide-table-header"
+										}
+									},
+									"items": {
+										"type": "string"
+									}
+								},
+								"Highlights": {
+									"type": "array",
+									"format": "table",
+									"options": {
+										"containerAttributes": {
+											"class": "hide-table-header"
+										}
+									},
+									"items": {
+										"type": "string"
+									}
+								},
+								"Keywords": {
+									"type": "array",
+									"format": "table",
+									"options": {
+										"containerAttributes": {
+											"class": "hide-table-header"
+										}
+									},
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"Advanced": {
+						"type": "object",
+						"properties": {
+							"Edit data directly": {
+								"type": "string",
+								"format": "json",
+								"options": {
+									"ace": {
+										"theme": "ace/theme/solarized_light",
+										"wrap": true
+									}
+								}
+							}
+						}
+					}
+				}
+			};
+			
+		</script>
+	</body>
+</html>
