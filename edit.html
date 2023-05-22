@@ -24,8 +24,8 @@
 				margin-left: 0.5em;
 				margin-right: 0.5em;
 			}
-			.json-editor-btn-save:after {
-				content: " Save changes";
+			.json-editor-btn-download:after {
+				content: " Download changes";
 			}
 			.json-editor-btntype-delete:after {
 				content: " Delete";
@@ -76,46 +76,29 @@
 				});
 				
 				editor.on('ready', function() {
-					var button = editor.root.getButton('Save changes', 'save', 'Save changes'),
+					var button = editor.root.getButton('Save changes', 'download', 'Save changes'),
 					button_holder = editor.root.theme.getHeaderButtonHolder();
 					button_holder.appendChild(button);
 					editor.root.header.parentNode.insertBefore(button_holder, editor.root.header.nextSibling);
 					
 					button.addEventListener('click', function(e) {
 						e.preventDefault();
-						console.log(editor.getValue());
 						
-					}, false);
-					
-					editor.getEditor('root.Advanced.Edit data directly').setValue(JSON.stringify(editor.getValue()));
-				});
-				
-				const updateJson = (e) => {
-					if (e.path !== 'root.Advanced.Edit data directly') {
-						editor.getEditor('root.Advanced.Edit data directly').setValue(JSON.stringify(editor.getValue()));
-					}
-				};
-				
-				function assignWatchers(schema, currentPath) {
-					Object.keys(schema.properties).forEach((property) => {
-						const propertyPath = currentPath ? `${currentPath}.${property}` : property;
-						if (propertyPath !== 'Advanced.Edit data directly') {
-							const subSchema = schema.properties[property];
-							if (subSchema.type === "object") {
-								assignWatchers(subSchema, propertyPath);
-								} else {
-								//editor.watch(propertyPath, onChange);
-								console.log(propertyPath);
-								console.log(subSchema);
-							}
-						}
+						var dateNow = new Date().toJSON().replace(/:/gi, '-').replace('T', '_').substring(0, 19);
+						
+						const contents = JSON.stringify(editor.getValue(), null, "\t");
+						const blob = new Blob([contents], {type: 'text/plain'});
+						const url = URL.createObjectURL(blob);
+						const a = document.createElement('a');
+						a.href = url;
+						a.download = "resume_" + dateNow;
+						a.click();
+						a.remove();
+						URL.revokeObjectURL(url);
+						
 					});
-				}
-				assignWatchers(resume_schema, '');
-				
-				
-				
-				
+					
+				}, false);
 				
 			});
 		</script>
@@ -240,6 +223,9 @@
 									"items": {
 										"type": "string"
 									}
+								},
+								"options": {
+									"disable_edit_json": true
 								}
 							}
 						}
@@ -545,21 +531,6 @@
 									},
 									"items": {
 										"type": "string"
-									}
-								}
-							}
-						}
-					},
-					"Advanced": {
-						"type": "object",
-						"properties": {
-							"Edit data directly": {
-								"type": "string",
-								"format": "json",
-								"options": {
-									"ace": {
-										"theme": "ace/theme/solarized_light",
-										"wrap": true
 									}
 								}
 							}
