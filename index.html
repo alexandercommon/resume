@@ -1,677 +1,533 @@
 <!doctype html>
 <html>
 	<head>
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
-	<title>Alexander Common - WORK IN PROGRESS</title>
-	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
-	
-	<style type="text/css">
-		@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-		html {
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+		
+		<title>Alex Common Resume</title>
+		
+		<style>body {
 			background: #fff;
-			font-family: Mukta, sans-serif;
-		}
-		a {
-			color: #2ecc71;
-		}
-		a:focus,
-		a:hover {
-			color: #f1c40f;
+			font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
+			line-height: 1.4;
+			margin: 0 0;
+			margin-bottom: 100px;
+			}
+			em {
+			color: #999;
+			}
+			p {
+			line-height: 1.6;
+			font-size: 90%;
+			}
+			
+			a {
+			color: #2C85B1;
 			text-decoration: none;
-		}
-		p {
-			line-height: 1.5;
+			font-weight: 400;
+			}
+			ul {
+			margin-bottom: 0;
+			}
+			section {
+			margin: 1em 0 2em;
+			}
+			blockquote {
 			margin: 0;
-		}
-		p + p {
-			margin-top: 10px;
-		}
-		h1,
-		h2,
-		h3,
-		h4 {
-			margin-top: 0
-		}
-		section {
-			margin-top: 30px;
-		}
-		li {
-			line-height: 1.8;
-			list-style: none;
-		}
-		li:before {
-			content: "•";
-			float: left;
-			margin-top: 6px;
-			margin-left: -20px;
-			position: absolute;
-			color: #2ecc71;
-		}
-		blockquote {
-			border-left: 5px solid #e7e9ec;
-			font-size: 14px;
-		}
-		em {
-			color: #95a5a6;
-			font-weight: normal;
-			font-style: normal;
-		}
-		h4 span:first-child {
-			color: #000;
-			font-weight: bold;
-		}
-		.container {
-			max-width: 750px;
-			padding: 0 30px;
-		}
-		.col-sm-6 {
-			margin-bottom: 10px;
-		}
-		.col-sm-12 h4 {
-			margin-top: 12px; 
-		}
-		.col-sm-12 + .col-sm-12 {
-			margin-top: 30px;
-		}
-		section {
-			padding-top: 30px
-		}
-		footer {
-			background: #bababa;
-			padding: 50px
-			margin-top: 30px;
-		}
-		#header {
-			background: ##f4f6f6;
-			padding: 50px 0;
-		}
-		#header h2 {
-			color: #95a5a6;
-			font-size: 24px;
-		}
-		#content h3 {
-			color: #02a4ff;
-			font-size: 26px;
-			margin-top: -4px;
-		}
-		#content aside {
-			text-align: right;
-			padding-right: 30px;
-		}
-		#profiles .network {
-			text-transform: capitalize;
-		}
-		#work .position,
-		#volunteer .position {
-			font-weight: bold;
-			margin-bottom: 8px;
-		}
-		#education .area {
-			font-weight: bold;
-		}
-		#education .area:before {
-			content: "•";
-			margin-right: 6px;
-			color: #2ecc71;
-		}
-		#education .studyType {
-			margin-left: 25px;
-		}
-		#awards .summary,
-		#publications .summary {
-			margin-top: 8px;
-		}
-		#publications .website a:before {
-			content: attr(href);
-		}
-
-		@media (min-width: 480px) {
-			.strike-through {
-				border-top: 1px solid #000;
-				height: 20px;
-				margin-top: 12px;
-				margin-bottom: -2px;
-				position: relative;
+			margin-bottom: 1em;
 			}
-			.strike-through span,
-			.strike-through a {
-				background: #fff;
-				position: absolute;
+			#resume {
+			margin: 2em 2em 2em 2.5em;
+			max-width: 760px;
 			}
-			.strike-through span:first-child {
-				padding-right: 20px;
-				margin-top: -15px;
+			
+			/* Resume heading */
+			.heading header { 
+			
 			}
-			.strike-through span + span {
-				font-size: 14px;
-				margin-top: -10px;
-				padding-left: 20px;
-				right: 0;
+			
+			.heading header h1 {
+			font-size: 180%;
+			margin: 0.5em 0;
+			font-weight: 600;
 			}
-		}
-		@media (max-width: 768px) {
-			.col-sm-6:last-child {
-				margin-bottom: 0px;
+			
+			.heading header h2 {
+			font-size: 140%;
+			margin: 0;
+			font-weight: 400;
 			}
-			#content aside {
-				margin-bottom: 20px;
-				padding-right: 0;
-				text-align: left;
+			
+			.heading header .contact .detail {
+			margin: 0 1em 0 0;
 			}
-			#publications .website a:before {
-				content: "View publication";
+			
+			.profile {
+			display: inline-block;
+			margin: 0 1em 0 0;
 			}
-		}
-		@media (max-width: 480px) {
-			h1 {
-				font-size: 26px;
+			
+			.profile strong,
+			.profile span {
+			display: inline-block;
+			margin: 0 1em 0 0;
 			}
-			.date {
-				font-size: 14px;
-				margin-bottom: 5px;
+			/* section / line breaks */
+			section h2 {
+			font-size: 140%;
+			margin: 0 0 1em;
+			text-transform: uppercase;
+			color: #BC1B39;
+			font-weight: 400;
 			}
-			.strike-through span:first-child {
-				margin-bottom: 7px;
+			
+			/* Experience items */
+			.item {
+			margin: 0 0 1em;
+			padding: 0 0 1em;
+			border-bottom: 1px solid #F2EBEC;
 			}
-			.strike-through span {
-				display: block;
-			}	
-			#header {
-				margin-bottom: 10px;
-				padding: 40px 0;
+			
+			.item:last-child {
+			border-bottom: none;
 			}
-			#actions {
-				display: none;
+			
+			
+			.item header h3 {
+			margin: 0.2em 1em 0.2em 0;
+			display: inline-block;
+			font-weight: 600;
 			}
-		}
-
-	</style>
-	
+			
+			.item header a {
+			display: inline-block;
+			}
+			
+			.item .position {
+			font-weight: 600;
+			font-size: 100%;
+			margin: 0.2em 1em 0.2em 0;
+			}
+			
+			.item .startDate,
+			.item .endDate {
+			color: #6B6B6B;
+			}
+			
+			.item .highlights {
+			list-style: square;
+			font-size: 90%;
+			}
+			
+			/* skills */
+			#skills .item {
+			margin: 0.5em 0;
+			padding: 0 0 0.5em;
+			font-size: 90%;
+			}
+			
+			#skills .item .name {
+			font-weight: 600;
+			display: inline-block;
+			text-transform: uppercase;
+			margin: 0 1em 0 0;
+			width: 23%;
+			vertical-align: top;
+			}
+			
+			#skills .item .keywords {
+			display: inline-block;
+			width: 70%;
+			vertical-align: top;
+			}
+			
+			/* education */
+			#education .item {
+			display: inline-block;
+			vertical-align: top;
+			width: 49.5%;
+			border-bottom: 0;
+			}
+		</style>
+		<style media="print">
+			body { font-size: 12px; }
+		</style>
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script>
 	</head>
 	<body>
-	
-	<header id="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-9 col-sm-push-3">
-					<h1>
-						Alexander Common - WORK IN PROGRESS
-					</h1>
-					<h2>
-						Software Developer
-					</h2>
-				</div>
+		<script id="template" type="text/x-handlebars-template">
+			<div id="resume">
+				
+				{{#resume.basics}}
+				<section class="heading">
+					<header>
+						<h1>{{name}}</h1>
+						<div class="contact">
+							{{#if email}}
+							<span class="detail">
+								<a href="mailto:{{email}}">{{email}}</a>
+							</span>
+							{{/if}}
+							{{#if phone}}
+							<span class="detail">
+								{{phone}}
+							</span>
+							{{/if}}
+							{{#if website}}
+							<span class="detail">
+								<a href="{{website}}">{{website}}</a>
+							</span>
+							{{/if}}
+						</div>
+					</header>
+					
+					
+					{{#if summary}}
+					<p>{{summary}}</p>
+					{{/if}}
+					
+					{{#if profiles.length}}
+					{{#each profiles}}
+					<div class="profile">
+						{{#if network}}
+						<strong class="network">
+							{{network}}
+						</strong>
+						{{/if}}
+						{{#if username}}
+						<span class="username">
+							{{#if url}}
+							<a href="{{url}}">{{username}}</a>
+							{{else}}
+							{{username}}
+							{{/if}}
+						</span>
+						{{/if}}
+					</div>
+					{{/each}}
+					{{/if}}
+					
+				</section>
+				{{/resume.basics}}
+				
+				{{#if resume.skills.length}}
+				<section id="skills">
+					<h2>Skills</h2>
+					{{#each resume.skills}}
+					<div class="item">
+						{{#if name}}
+						<div class="name">
+							{{name}}
+						</div>
+						{{/if}}
+						{{#if keywords.length}}
+						<div class="keywords">
+							{{#each keywords}}
+							{{.}}{{#if @last}}{{else}},{{/if}}
+							{{/each}}
+						</div>
+						{{/if}}
+					</div>
+					{{/each}}
+				</section>
+				{{/if}}
+				
+				{{#if resume.work.length}}
+				<section class="experience">
+					<h2>Experience</h2>
+					{{#each resume.work}}
+					<section class="item">
+						<header>
+							{{#if company}}
+							<h3 class="name">{{company}}</h3>
+							{{/if}}
+						</header>
+						{{#if position}}
+						<span class="position">
+							{{position}}
+						</span>
+						{{/if}}
+						
+						{{#if startDate}}
+						<span class="startDate">
+							{{startDate}}
+						</span>
+						{{/if}}
+						{{#if endDate}}
+						<span class="endDate">
+							- {{endDate}}
+						</span>
+						{{else}}
+						<span class="endDate">
+							- Present
+						</span>
+						{{/if}}
+						
+						{{#if summary}}
+						<div class="summary">
+							<p>{{summary}}</p>
+						</div>
+						{{/if}}
+						{{#if highlights.length}}
+						<ul class="highlights">
+							{{#each highlights}}
+							<li>{{.}}</li>
+							{{/each}}
+						</ul>
+						{{/if}}
+					</section>
+					{{/each}}
+				</section>
+				{{/if}}
+				
+				{{#if resume.volunteer.length}}
+				<section class="experience">
+					<h2>Volunteering</h2>
+					{{#each resume.volunteer}}
+					<div class="item">
+						<header>
+							{{#if organization}}
+							<h3 class="name">{{organization}}</h3>
+							{{/if}}
+						</header>
+						{{#if position}}
+						<span class="position">
+							{{position}}
+						</span>
+						{{/if}}
+						
+						{{#if startDate}}
+						<span class="startDate">
+							{{startDate}}
+						</span>
+						{{/if}}
+						{{#if endDate}}
+						<span class="endDate">
+							- {{endDate}}
+						</span>
+						{{else}}
+						<span class="endDate">
+							- Present
+						</span>
+						{{/if}}
+						
+						{{#if summary}}
+						<div class="summary">
+							<p>{{summary}}</p>
+						</div>
+						{{/if}}
+						{{#if highlights.length}}
+						<ul class="highlights">
+							{{#each highlights}}
+							<li>{{.}}</li>
+							{{/each}}
+						</ul>
+						{{/if}}
+					</div>
+					{{/each}}
+				</section>
+				{{/if}}
+				
+				{{#if resume.education.length}}
+				<section id="education">
+					<h2>Education</h2>
+					{{#each resume.education}}
+					<div class="item">
+						<header>
+							{{#if institution}}
+							<h3 class="name">{{institution}}</h3>
+							{{/if}}
+						</header>
+						
+						<div class="dates">
+							{{#if startDate}}
+							<span class="startDate">
+								{{startDate}}
+							</span>
+							{{/if}}
+							{{#if endDate}}
+							<span class="endDate">
+								- {{endDate}}
+							</span>
+							{{else}}
+							<span class="endDate">
+								- Present
+							</span>
+							{{/if}}
+						</div>
+						
+						<div class="qualification">
+							{{#if studyType}}
+							<span class="studyType">
+								{{studyType}}
+							</span>
+							{{/if}}
+							
+							{{#if area}}
+							<span class="area">
+								- {{area}}
+							</span>
+							{{/if}}
+							
+							{{#if gpa}}
+							<span class="gpa">
+								GPA: {{gpa}}
+							</span>
+							{{/if}}
+						</div>
+						
+					</div>
+					{{/each}}
+				</section>
+				{{/if}}
+				
+				{{#if resume.awards.length}}
+				<section id="awards">
+					<h2>Awards</h2>
+					{{#each resume.awards}}
+					<div class="item">
+						{{#if title}}
+						<div class="title">
+							{{title}}
+						</div>
+						{{/if}}
+						{{#if date}}
+						<div class="date">
+							{{date}}
+						</div>
+						{{/if}}
+						{{#if awarder}}
+						<div class="awarder">
+							{{awarder}}
+						</div>
+						{{/if}}
+						{{#if summary}}
+						<div class="summary">
+							<p>{{summary}}</p>
+						</div>
+						{{/if}}
+					</div>
+					{{/each}}
+				</section>
+				{{/if}}
+				
+				{{#if resume.publications.length}}
+				<section id="publications">
+					<h2>Publications</h2>
+					{{#each resume.publications}}
+					<div class="item">
+						{{#if name}}
+						<div class="name">
+							{{name}}
+						</div>
+						{{/if}}
+						{{#if publisher}}
+						<div class="publisher">
+							{{publisher}}
+						</div>
+						{{/if}}
+						{{#if releaseDate}}
+						<div class="releaseDate">
+							{{releaseDate}}
+						</div>
+						{{/if}}
+						{{#if website}}
+						<div class="website">
+							<a href="{{website}}">Link</a>
+						</div>
+						{{/if}}
+						{{#if summary}}
+						<div class="summary">
+							<p>{{summary}}</p>
+						</div>
+						{{/if}}
+					</div>
+					{{/each}}
+				</section>
+				{{/if}}
+				
+				{{#if resume.languages.length}}
+				<section id="languages">
+					<h2>Languages</h2>
+					{{#each resume.languages}}
+					<div class="item">
+						{{#if language}}
+						<div class="language">
+							{{language}}
+						</div>
+						{{/if}}
+						{{#if fluency}}
+						<div class="fluency">
+							<em>{{fluency}}</em>
+						</div>
+						{{/if}}
+					</div>
+					{{/each}}
+				</section>
+				{{/if}}
+				
+				{{#if resume.interests.length}}
+				<section id="interests">
+					<h2>Interests</h2>
+					{{#each resume.interests}}
+					<div class="item">
+						{{#if name}}
+						<div class="name">
+							{{name}}
+						</div>
+						{{/if}}
+						{{#if keywords.length}}
+						<ul class="keywords">
+							{{#each keywords}}
+							<li>{{.}}</li>
+							{{/each}}
+						</ul>
+						{{/if}}
+					</div>
+					{{/each}}
+				</section>
+				{{/if}}
+				
+				{{#if resume.references.length}}
+				<section id="references">
+					<h2>References</h2>
+					{{#each resume.references}}
+					<div class="item">
+						{{#if reference}}
+						<blockquote class="reference">
+							{{reference}}
+						</blockquote>
+						{{/if}}
+						{{#if name}}
+						<div class="name">
+							— {{name}}
+						</div>
+						{{/if}}
+					</div>
+					{{/each}}
+				</section>
+				{{/if}}
+				
 			</div>
-		</div>
-	</header>
-	<div id="content" class="container">
+		</script>
+		<script>
+			fetch('https://resume.alexc.wtf/data.json')
+			.then(response => response.json())
+			.then(data => {
+				var source = document.getElementById("template").innerText;
+				var template = Handlebars.compile(source);
+				data = { "resume": data };
+				var output = template(data);
 
-	<section id="contact" class="row">
-		<aside class="col-sm-3">
-			<h3>Contact</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-				<div class="col-sm-6">
-					<strong>Email</strong>
-					<div class="email">alexander.a.common@gmail.com</div>
-				</div>
-				<div class="col-sm-6">
-					<strong>Phone</strong>
-					<div class="phone">810-624-0639</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="about" class="row">
-		<aside class="col-sm-3">
-			<h3>About</h3>
-		</aside>
-		<div class="col-sm-9">
-			<p>An information technology professional with 14 years experience. Specializing in process improvement, documentation, requirement gathering & analysis, and automation.</p>
-		</div>
-	</section>
+				document.body.innerHTML += output;
+			})
+			.catch(error => console.error('Error:', error));
 		
-	<section id="work" class="row">
-		<aside class="col-sm-3">
-			<h3>Work</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>GM / Onstar</span>
-					<span class="date">
-						2016 May — current
-					</span>
-				</h4>
-				<div class="position">
-					Software Developer&nbsp;|&nbsp;Global Billing Resources
-				</div>
-				<div class="summary">
-					<p>Primary responsibilities include upgrading and maintaining the OnStar billing systems. Also, researching potential improvements, creating and maintaining documentation, and corporate compliance. Worked in a close-knit team oriented environment. Delivering objects under tight deadlines in fast-paced, client-oriented environment</p>
-				</div>
-				
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					
-					<li class="bullet">Automated month-end billing process</li>
-					
-					<li class="bullet">Designed an implemented HTML invoice templates for middle-east</li>
-					
-					<li class="bullet">Converted old MS Word invoices into HTML & Liquid</li>
-					
-					<li class="bullet">Co-implemented tax reporting workflow for Mexico</li>
-					
-					<li class="bullet">Automated product catalog comparison</li>
-					
-					<li class="bullet">Improved Linux SSH login practices</li>
-					
-					<li class="bullet">Improved consumer personal information handling</li>
-					
-					<li class="bullet">Improved workflow error reporting procedure</li>
-					
-				</ul>
-				
-			</div>
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Computer Science Corporation</span>
-					<span class="date">
-						2012 Jun — 2016 Apr
-					</span>
-				</h4>
-				<div class="position">
-					Software Developer&nbsp;|&nbsp;Pratt & Whitney, and Sikorsky
-				</div>
-				<div class="summary">
-					<p>Primary responsibilities include upgrading and maintaining the Solumina manufacturing execution system</p>
-				</div>
-				
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					
-					<li class="bullet">Implemented an automated patching script, freeing developers from making SQL patches manually.</li>
-					
-					<li class="bullet">Solved a number of problems previously thought unsolvable. Including methods to change user input screens on-the-fly, overcoming out-of-the-box limitations.</li>
-					
-					<li class="bullet">Discovered, implemented and maintained solution to display webpages within manufacturing program.</li>
-					
-				</ul>
-				
-			</div>
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>University of Michigan - Flint</span>
-					<span class="date">
-						2010 — 2012
-					</span>
-				</h4>
-				<div class="position">
-					Teacher's Assisitant - Digital Logic, and Programming classes
-				</div>
-				<div class="summary">
-					<p></p>
-				</div>
-				
-			</div>
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>University of Michigan - Flint</span>
-					<span class="date">
-						2009 — 2011
-					</span>
-				</h4>
-				<div class="position">
-					IT Helpdesk - Desktop Support
-				</div>
-				<div class="summary">
-					<p></p>
-				</div>
-				
-			</div>
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Retail</span>
-					<span class="date">
-						2003 — 2009
-					</span>
-				</h4>
-				<div class="position">
-					
-				</div>
-				<div class="summary">
-					<p></p>
-				</div>
-				
-			</div>
-			
-			</div>
-		</div>
-	</section>
-
-	<section id="volunteer" class="row">
-		<aside class="col-sm-3">
-			<h3>Volunteer</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Mr. Peace Inc.</span>
-					<span class="date">
-						2015 Feb — current
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href=""></a>
-				</div>
-				<div class="position">
-					Digital logitstics, media production, & marketting
-				</div>
-				<div class="summary">
-					<p>Development and implementation of marketting strategies, including photography, audio recording, video recording, etc. Website development and maintenance. Business strategy and growth brainstorming. And general assistance.</p>
-				</div>
-				
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					
-					<li class="bullet">Organized and centralized documentation and records</li>
-					
-					<li class="bullet">Created small-scale customer-resource management solution</li>
-					
-					<li class="bullet">Develeoped new website</li>
-					
-					<li class="bullet">Shot and created numerous music videos</li>
-					
-					<li class="bullet">Recorded numerous music albums</li>
-					
-				</ul>
-				
-			</div>
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Ferndale Cat Shelter</span>
-					<span class="date">
-						2021 Jun — current
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href=""></a>
-				</div>
-				<div class="position">
-					Customer Service
-				</div>
-				<div class="summary">
-					<p>Interact with visitors, answer any questions about the shelter and adoption, and ensure cats & visitors get along. Clean up and open if necessary. Occationally visitor check-in and cash register.</p>
-				</div>
-				
-			</div>
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>P.A.A.W.</span>
-					<span class="date">
-						2021 Apr — 2023 Mar
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href=""></a>
-				</div>
-				<div class="position">
-					Cleaning & cat socialization
-				</div>
-				<div class="summary">
-					<p></p>
-				</div>
-				
-			</div>
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Chabad House of Eastern Michigan</span>
-					<span class="date">
-						2012 — current
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href=""></a>
-				</div>
-				<div class="position">
-					Desktop support
-				</div>
-				<div class="summary">
-					<p></p>
-				</div>
-				
-			</div>
-			
-			</div>
-		</div>
-	</section>
-	
-	<section id="education" class="row">
-		<aside class="col-sm-3">
-			<h3>Education</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>University of Michigan Flint</span>
-					<span class="date">
-						2007 — 2012
-					</span>
-				</h4>
-				<div class="area">
-					Computer Science
-				</div>
-				<div class="studyType">
-					Bachelors of Science
-				</div>
-				<!--h4>Courses</h4>
-				<ul class="courses">
-					<li>DB1101 - Basic SQL</li>
-					<li>CS2011 - Java Introduction</li>
-				</ul-->
-			</div>
-			
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>University of Detroit Mercy</span>
-					<span class="date">
-						2005 — 2006
-					</span>
-				</h4>
-				<div class="area">
-					Architecture
-				</div>
-				<div class="studyType">
-					Changed majors
-				</div>
-				<!--h4>Courses</h4>
-				<ul class="courses">
-					<li>DB1101 - Basic SQL</li>
-					<li>CS2011 - Java Introduction</li>
-				</ul-->
-			</div>
-			
-			</div>
-		</div>
-	</section>
-	
-	<!--section id="awards" class="row">
-		<aside class="col-sm-3">
-			<h3>Awards</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Digital Compression Pioneer Award</span>
-				</h4>
-				<div class="date pull-right">
-					<em>Awarded</em>
-					2014-11-01
-				</div>
-				<div class="awarder">
-					<em>by</em>
-					<strong>Techcrunch</strong>
-				</div>
-				<div class="summary">
-					There is no spoon.
-				</div>
-			</div>
-			</div>
-		</div>
-	</section-->
-	
-	<!--section id="publications" class="row">
-		<aside class="col-sm-3">
-			<h3>Publications</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Video compression for 3d media</span>
-					<span class="date">
-						2014-10-01
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"></a>
-				</div>
-				<div class="publisher">
-					<em>Published by</em>
-					<strong>Hooli</strong>
-				</div>
-				<div class="summary">
-					<p>Innovative middle-out compression algorithm that changes the way we store data.</p>
-				</div>
-			</div>
-			</div>
-		</div>
-	</section-->
-	
-	<section id="skills" class="row">
-		<aside class="col-sm-3">
-			<h3>Skills</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Web Development</h4>
-				</div>
-				
-				<ul class="keywords">
-					
-					<li>HTML</li>
-					
-					<li>CSS</li>
-					
-					<li>JavaScript</li>
-					
-				</ul>
-				
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Compression</h4>
-				</div>
-				<ul class="keywords">
-					<li>Mpeg</li>
-					<li>MP4</li>
-					<li>GIF</li>
-				</ul>
-			</div>
-			
-			</div>
-		</div>
-	</section>
-
-	<!--section id="languages" class="row">
-		<aside class="col-sm-3">
-			<h3>Languages</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<div class="language">
-					<strong>English</strong>
-				</div>
-				<div class="fluency">
-					Native speaker
-				</div>
-			</div>
-			</div>
-		</div>
-	</section-->
-
-	<section id="interests" class="row">
-		<aside class="col-sm-3">
-			<h3>Interests</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Wildlife</h4>
-				</div>
-				
-				<ul class="keywords">
-				
-					<li>Ferrets</li>
-				
-					<li>Unicorns</li>
-				
-				</ul>
-				
-			</div>
-			
-			</div>
-		</div>
-	</section>
-	
-	<!--section id="references" class="row">
-		<aside class="col-sm-3">
-			<h3>References</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<blockquote class="reference">
-					<p>It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company.</p>
-					<p class="name">
-						<strong>— Erlich Bachman</strong>
-					</p>
-				</blockquote>
-			</div>
-			</div>
-		</div>
-	</section-->
-
-	</div>
-
-	  <footer class="py-3 mt-4">
-	    <p class="text-center text-body-secondary p-5">Updated 2023-05-22 16:52:05-0400</p>
-	  </footer>
-	
+		</script>
+		
 	</body>
 </html>
