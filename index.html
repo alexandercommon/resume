@@ -380,6 +380,13 @@
 							{{/if}}
 						</div>
 						
+						{{#if highlights.length}}
+						<ul class="highlights">
+							{{#each highlights}}
+							<li>{{.}}</li>
+							{{/each}}
+						</ul>
+						{{/if}}
 					</div>
 					{{/each}}
 				</section>
