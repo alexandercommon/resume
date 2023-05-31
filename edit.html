@@ -109,72 +109,90 @@
 				"format": "categories",
 				"title": "Resume data",
 				"properties": {
-					"Personal Info": {
+					"basics": {
+						"title": "Personal Info",
 						"type": "object",
 						"properties": {
-							"Name": {
+							"name": {
+								"title": "Name",
 								"type": "string"
 							},
-							"Job title": {
+							"label": {
+								"title": "Job title",
 								"type": "string",
 								"description": "e.g. medical doctor"
 							},
-							"Image": {
+							"image": {
+								"title": "Image",
 								"type": "string",
 								"description": "Link to image"
 							},
-							"Email": {
+							"email": {
+								"title": "Email",
 								"type": "string",
 								"description": "e.g. thomas@gmail.com",
 								"format": "email"
 							},
-							"Phone": {
+							"phone": {
+								"title": "Phone",
+								"title": "Phone",
 								"type": "string"
 							},
-							"Website Link": {
+							"url": {
+								"title": "Website Link",
 								"type": "string",
 								"format": "uri"
 							},
-							"General Summary": {
+							"summary": {
+								"title": "General Summary",
 								"type": "string",
 								"description": "Write a short 2-3 sentence biography about yourself"
 							},
-							"Address": {
+							"location": {
+								"title": "Address",
 								"type": "object",
 								"additionalProperties": true,
 								"properties": {
-									"Street": {
+									"address": {
+										"title": "Street",
 										"type": "string"
 									},
-									"City": {
+									"city": {
+										"title": "City",
 										"type": "string"
 									},
-									"State": {
+									"region": {
+										"title": "State",
 										"type": "string"
 									},
-									"Postal Code": {
+									"postalCode": {
+										"title": "Postal Code",
 										"type": "string"
 									},
-									"Country": {
+									"countryCode": {
+										"title": "Country",
 										"type": "string"
 									}
-								},
-								"defaultProperties" : ["Street", "City", "State", "Postal Code", "Country"]
+								}
 							},
-							"Profile Links": {
+							"profiles": {
+								"title": "Profile Links",
 								"type": "array",
 								"format": "table",
 								"items": {
 									"type": "object",
 									"headerTemplate": "{{#if self.Site}}{{i1}}: {{self.Site}}{{else}}Profile {{i1}}{{/if}}",
 									"properties": {
-										"Site": {
+										"network": {
+											"title": "Site",
 											"type": "string"
 										},
-										"Username": {
+										"username": {
+											"title": "Username",
 											"type": "string"
 										},
-										"Link": {
+										"url": {
+											"title": "Link",
 											"type": "string"
 										}
 									},
@@ -182,37 +200,44 @@
 								}
 								
 							}
-						},
-						"defaultProperties": ["Name", "Job title", "Image", "Email", "Phone", "Website Link", "General Summary", "Address", "Profile Links"]
+						}
 					},
-					"Work experience": {
+					"work": {
+						"title": "Work experience",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Company Name]}}{{i1}}: {{self.[Company Name]}}{{else}}Job {{i1}}{{/if}}",
 							"properties": {
-								"Company Name": {
+								"name": {
+									"title": "Company Name",
 									"type": "string",
 									"title": "Company Name",
 									"propertyOrder": 1
 								},
-								"Job title": {
+								"position": {
+									"title": "Job title",
 									"type": "string"
 								},
-								"Link": {
+								"url": {
+									"title": "Link",
 									"type": "string"
 								},
-								"Star Date": {
+								"startDate": {
+									"title": "Star Date",
 									"type": "string"
 								},
-								"End Date": {
+								"endDate": {
+									"title": "End Date",
 									"type": "string"
 								},
-								"Description": {
+								"summary": {
+									"title": "Description",
 									"type": "string"
 								},
-								"Highlights": {
+								"highlights": {
+									"title": "Highlights",
 									"type": "array",
 									"format": "table",
 									"options": {
@@ -223,39 +248,44 @@
 									"items": {
 										"type": "string"
 									}
-								},
-								"options": {
-									"disable_edit_json": true
 								}
 							}
 						}
 					},
-					"Volunteering": {
+					"volunteer": {
+						"title": "Volunteering",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Organization]}}{{i1}}: {{self.[Organization]}}{{else}}Volunterring {{i1}}{{/if}}",
 							"properties": {
-								"Organization": {
+								"organization": {
+									"title": "Organization",
 									"type": "string"
 								},
-								"Job title": {
+								"position": {
+									"title": "Job title",
 									"type": "string"
 								},
-								"Link": {
+								"url": {
+									"title": "Link",
 									"type": "string"
 								},
-								"Start Date": {
+								"startDate": {
+									"title": "Start Date",
 									"type": "string"
 								},
-								"End Date": {
+								"endDate": {
+									"title": "End Date",
 									"type": "string"
 								},
-								"Description": {
+								"summary": {
+									"title": "Description",
 									"type": "string"
 								},
-								"Highlights": {
+								"highlights": {
+									"title": "Highlights",
 									"type": "array",
 									"format": "table",
 									"options": {
@@ -270,35 +300,44 @@
 							}
 						}
 					},
-					"Education": {
+					"education": {
+						"title": "Education",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[University]}}{{i1}}: {{self.[University]}}{{else}}Education {{i1}}{{/if}}",
 							"properties": {
-								"University": {
+								"institution": {
+									"title": "University",
 									"type": "string"
 								},
-								"Link": {
+								"url": {
+									"title": "Link",
 									"type": "string"
 								},
-								"Major": {
+								"area": {
+									"title": "Major",
 									"type": "string"
 								},
-								"Degree Type": {
+								"studyType": {
+									"title": "Degree type",
 									"type": "string"
 								},
-								"Start Date": {
+								"startDate": {
+									"title": "Start Date",
 									"type": "string"
 								},
-								"End Date": {
+								"endDate": {
+									"title": "End Date",
 									"type": "string"
 								},
-								"GPA": {
+								"score": {
+									"title": "GPA",
 									"type": "string"
 								},
-								"Highlights": {
+								"courses": {
+									"title": "Highlights",
 									"type": "array",
 									"format": "table",
 									"options": {
@@ -313,89 +352,109 @@
 							}
 						}
 					},
-					"Awards": {
+					"awards": {
+						"title": "Awards",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Title]}}{{i1}}: {{self.[Title]}}{{else}}Award {{i1}}{{/if}}",
 							"properties": {
-								"Title": {
+								"title": {
+									"title": "Title",
 									"type": "string"
 								},
-								"Date": {
+								"date": {
+									"title": "Date",
 									"type": "string"
 								},
-								"Awarded by": {
+								"awarder": {
+									"title": "Awarded by",
 									"type": "string"
 								},
-								"Description": {
+								"summary": {
+									"title": "Description",
 									"type": "string"
 								}
 							}
 						}
 					},
-					"Certificates": {
+					"certificates": {
+						"title": "Certificates",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Name]}}{{i1}}: {{self.[Name]}}{{else}}Cert {{i1}}{{/if}}",
 							"properties": {
-								"Name": {
+								"name": {
+									"title": "Name",
 									"type": "string"
 								},
-								"Date": {
+								"date": {
+									"title": "Date",
 									"type": "string"
 								},
-								"Issued by": {
+								"issuer": {
+									"title": "Issued by",
 									"type": "string"
 								},
-								"Link": {
+								"url": {
+									"title": "Link",
 									"type": "string"
 								}
 							}
 						}
 					},
-					"Publications": {
+					"publications": {
+						"title": "Publications",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Name]}}{{i1}}: {{self.[Name]}}{{else}}Publication {{i1}}{{/if}}",
 							"properties": {
-								"Name": {
+								"name": {
+									"title": "Name",
 									"type": "string"
 								},
-								"Publisher": {
+								"publisher": {
+									"title": "Publisher",
 									"type": "string"
 								},
-								"Release Date": {
+								"releaseDate": {
+									"title": "Release Date",
 									"type": "string"
 								},
-								"Link": {
+								"url": {
+									"title": "Link",
 									"type": "string"
 								},
-								"Description": {
+								"summary": {
+									"title": "Description",
 									"type": "string"
 								}
 							}
 						}
 					},
-					"Skills": {
+					"skills": {
+						"title": "Skills",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Skill area]}}{{i1}}: {{self.[Skill area]}}{{else}}Skill area {{i1}}{{/if}}",
 							"properties": {
-								"Skill area": {
+								"name": {
+									"title": "Skill area",
 									"type": "string"
 								},
-								"Level": {
+								"level": {
+									"title": "Level",
 									"type": "string"
 								},
-								"Specific skills": {
+								"keywords": {
+									"title": "Specific skills",
 									"type": "array",
 									"format": "table",
 									"options": {
@@ -410,34 +469,40 @@
 							}
 						}
 					},
-					"Languages": {
+					"languages": {
+						"title": "language",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Language]}}{{i1}}: {{self.[Language]}}{{else}}Language {{i1}}{{/if}}",
 							"properties": {
-								"Language": {
+								"language": {
+									"title": "Language",
 									"type": "string"
 								},
-								"Fluency": {
+								"fluency": {
+									"title": "Fluency",
 									"type": "string"
 								}
 							}
 						}
 					},
-					"Interests": {
+					"interests": {
+						"title": "Interests",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Interest area]}}{{i1}}: {{self.[Interest area]}}{{else}}Interest area {{i1}}{{/if}}",
 							"properties": {
-								"Interest area": {
+								"name": {
+									"title": "Interest area",
 									"type": "string",
 									"description": "e.g. art, computers, car repair"
 								},
-								"Specific interests": {
+								"keywords": {
+									"title": "Specific interests",
 									"type": "array",
 									"format": "table",
 									"options": {
@@ -453,51 +518,63 @@
 							}
 						}
 					},
-					"References": {
+					"references": {
+						"title": "References",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Reference name]}}{{i1}}: {{self.[Reference name]}}{{else}}Reference {{i1}}{{/if}}",
 							"properties": {
-								"Reference name": {
+								"name": {
+									"title": "Reference name",
 									"type": "string"
 								},
-								"Quote": {
+								"reference": {
+									"title": "Quote",
 									"type": "string"
 								}
 							}
 						}
 					},
-					"Projects": {
+					"projects": {
+						"title": "Projects",
 						"type": "array",
 						"format": "tabs-top",
 						"items": {
 							"type": "object",
 							"headerTemplate": "{{#if self.[Project Name]}}{{i1}}: {{self.[Project Name]}}{{else}}Project {{i1}}{{/if}}",
 							"properties": {
-								"Project Name": {
+								"name": {
+									"title": "Project Name",
 									"type": "string"
 								},
-								"Description": {
+								"description": {
+									"title": "Description",
 									"type": "string"
 								},
-								"Organization": {
+								"entity": {
+									"title": "Organization",
 									"type": "string"
 								},
-								"Start date": {
+								"startDate": {
+									"title": "Start date",
 									"type": "string"
 								},
-								"End date": {
+								"endDate": {
+									"title": "End date",
 									"type": "string"
 								},
-								"Link": {
+								"url": {
+									"title": "Link",
 									"type": "string"
 								},
-								"Project type": {
+								"type": {
+									"title": "Project type",
 									"type": "string"
 								},
-								"Roles": {
+								"roles": {
+									"title": "Roles",
 									"type": "array",
 									"format": "table",
 									"options": {
@@ -509,7 +586,8 @@
 										"type": "string"
 									}
 								},
-								"Highlights": {
+								"highlights": {
+									"title": "Highlights",
 									"type": "array",
 									"format": "table",
 									"options": {
@@ -521,7 +599,8 @@
 										"type": "string"
 									}
 								},
-								"Keywords": {
+								"keywords": {
+									"title": "Keywords",
 									"type": "array",
 									"format": "table",
 									"options": {
@@ -538,7 +617,6 @@
 					}
 				}
 			};
-			
 		</script>
 	</body>
 </html>
