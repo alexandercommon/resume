@@ -149,6 +149,20 @@
 	"publications": [],
 	"skills": [
 		{
+			"name": "Soft skills",
+			"keywords": [
+				"Speed reading",
+				"Learning quickly",
+				"Googling / info gathering",
+				"Customer service",
+				"Out-of-the-box thinking",
+				"Communication",
+				"Empathy",
+				"Team Cooperation",
+				"Time Management"
+			]
+		},
+		{
 			"name": "Web development",
 			"level": "",
 			"keywords": [
