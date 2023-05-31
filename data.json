@@ -1,28 +1,28 @@
 {
 	"basics": {
-		"name": "Alexander Common - WORK IN PROGRESS", 
+		"name": "Alexander Common",
 		"label": "Software Developer",
 		"image": "",
 		"email": "alexander.a.common@gmail.com",
-		"phone": "810-624-0639",
-		"summary": "An information technology professional with 14 years experience. Specializing in process improvement, documentation, requirement gathering & analysis, and automation.",
+		"phone": "",
+		"url": "",
+		"summary": "An information technology professional with 14 years experience. Specializing in process improvement, documentation, requirement gathering & analysis, and automation",
 		"location": {
+			"address": "",
 			"city": "Ferndale",
+			"region": "MI",
 			"postalCode": "48220",
-			"countryCode": "US",
-			"region": "Michigan"
+			"countryCode": "USA"
 		},
-		"soft_skills": [
-			"Customer service",
-			""
-		]
+		"profiles": []
 	},
-	"work": [{
+	"work": [
+		{
 			"name": "GM / Onstar",
-			"group": "Global Billing Resources",
 			"position": "Software Developer",
+			"url": "",
 			"startDate": "2016 May",
-			"endDate": "current",
+			"endDate": "2023 May",
 			"summary": "Primary responsibilities include upgrading and maintaining the OnStar billing systems. Also, researching potential improvements, creating and maintaining documentation, and corporate compliance. Worked in a close-knit team oriented environment. Delivering objects under tight deadlines in fast-paced, client-oriented environment",
 			"highlights": [
 				"Automated month-end billing process",
@@ -30,100 +30,211 @@
 				"Converted old MS Word invoices into HTML & Liquid",
 				"Co-implemented tax reporting workflow for Mexico",
 				"Automated product catalog comparison",
-				"Improved Linux SSH login practices",
-				"Improved consumer personal information handling",
-				"Improved workflow error reporting procedure"
+				"Implemented SSH key authentication to improve security",
+				"Implemented database encryption to protect consumer information",
+				"Implemented and improved workflow error reporting procedure"
 			]
-		}, {
-			"name": "Computer Science Corporation",
-			"group": "Pratt & Whitney, and Sikorsky",
+		},
+		{
+			"name": "Computer Science Corporation - Pratt & Whitney, and Sikorsky",
 			"position": "Software Developer",
-			"startDate": "2012 Jun",
-			"endDate": "2016 Apr",
+			"url": "",
+			"startDate": "2012 June",
+			"endDate": "2016 April",
 			"summary": "Primary responsibilities include upgrading and maintaining the Solumina manufacturing execution system",
 			"highlights": [
 				"Implemented an automated patching script, freeing developers from making SQL patches manually.",
 				"Solved a number of problems previously thought unsolvable. Including methods to change user input screens on-the-fly, overcoming out-of-the-box limitations.",
 				"Discovered, implemented and maintained solution to display webpages within manufacturing program."
 			]
-		}, {
+		},
+		{
 			"name": "University of Michigan - Flint",
 			"position": "Teacher's Assisitant - Digital Logic, and Programming classes",
+			"url": "",
 			"startDate": "2010",
-			"endDate": "2012"
-		}, {
+			"endDate": "2012",
+			"summary": "",
+			"highlights": []
+		},
+		{
 			"name": "University of Michigan - Flint",
-			"position": "IT Helpdesk - Desktop Support",
+			"position": "IT Helpdesk - Desktop Suppor",
+			"url": "",
 			"startDate": "2009",
-			"endDate": "2011"
-		}, {
+			"endDate": "2011",
+			"summary": "",
+			"highlights": []
+		},
+		{
 			"name": "Retail",
+			"position": "",
+			"url": "",
 			"startDate": "2003",
-			"endDate": "2009"
+			"endDate": "2011",
+			"summary": "",
+			"highlights": []
 		}
-
 	],
-	"volunteer": [{
-		"organization": "Mr. Peace Inc.",
-		"position": "Digital logitstics, media production, & marketting",
-		"url": "https://mrpeace.org/",
-		"startDate": "2015 Feb",
-		"endDate": "current",
-		"summary": "Development and implementation of marketting strategies, including photography, audio recording, video recording, etc. Website development and maintenance. Business strategy and growth brainstorming. And general assistance.",
-		"highlights": [
-			"Organized and centralized documentation and records",
-			"Created small-scale customer-resource management solution",
-			"Develeoped new website",
-			"Shot and created numerous music videos",
-			"Recorded numerous music albums"
-		]
-	}, {
-		"organization": "Ferndale Cat Shelter",
-		"position": "Customer Service",
-		"url": "https://ferndalecatshelter.org/",
-		"startDate": "2021 Jun",
-		"endDate": "current",
-		"summary": "Interact with visitors, answer any questions about the shelter and adoption, and ensure cats & visitors get along. Clean up and open if necessary. Occationally visitor check-in and cash register."
-	}, {
-		"organization": "P.A.A.W.",
-		"position": "Cleaning & cat socialization",
-		"url": "https://paawarren.org/",
-		"startDate": "2021 Apr",
-		"endDate": "2023 Mar"
-	}, {
-		"organization": "Chabad House of Eastern Michigan",
-		"position": "Desktop support",
-		"url": "http://116.centers.chabad.org/",
-		"startDate": "2012",
-		"endDate": "current"
-	}],
-	"education": [{
-		"institution": "University of Michigan Flint",
-		"area": "Computer Science",
-		"studyType": "Bachelors of Science",
-		"startDate": "2007",
-		"endDate": "2012"
-	}, {
-		"institution": "University of Detroit Mercy",
-		"area": "Architecture",
-		"studyType": "Changed majors",
-		"startDate": "2005",
-		"endDate": "2006"
-	}],
-	"skills": [{
-		"name": "Web Development",
-		"level": "Master",
-		"keywords": [
-			"HTML",
-			"CSS",
-			"JavaScript"
-		]
-	}],
-	"interests": [{
-		"name": "Wildlife",
-		"keywords": [
-			"Ferrets",
-			"Unicorns"
-		]
-	}]
+	"volunteer": [
+		{
+			"organization": "Mr. Peace Inc.",
+			"position": "Digital logistics & media production",
+			"url": "https://mrpeace.org/",
+			"startDate": "2015",
+			"endDate": "current",
+			"summary": "Development and implementation of marketting strategies, including photography, audio recording, video recording, etc. Website development and maintenance. Business strategy and growth brainstorming. And general assistance.",
+			"highlights": [
+				"Organized and centralized documentation and records",
+				"Created small-scale customer-resource management solution",
+				"Develeoped new website",
+				"Shot and created numerous music videos",
+				"Recorded numerous music albums",
+				"Coordinated production of promotional material"
+			]
+		},
+		{
+			"organization": "Ferndale Cat Shelter",
+			"position": "Visitor Service",
+			"url": "https://ferndalecatshelter.org/",
+			"startDate": "2022 Jun",
+			"endDate": "current",
+			"summary": "Interact with visitors, answer any questions about the shelter and adoption, and ensure cats & visitors get along. Clean up and open if necessary. Occasionally visitor check-in and cash register.",
+			"highlights": []
+		},
+		{
+			"organization": "Pet Adoption Alternative of Warren",
+			"position": "Cleaning & cat socialization",
+			"url": "https://paawarren.org/",
+			"startDate": "2021 April",
+			"endDate": "2023 March",
+			"summary": "",
+			"highlights": []
+		},
+		{
+			"organization": "Chabad House of Eastern Michigan",
+			"position": "Desktop Support",
+			"url": "http://116.centers.chabad.org/",
+			"startDate": "2012",
+			"endDate": "current",
+			"summary": "",
+			"highlights": []
+		}
+	],
+	"education": [
+		{
+			"institution": "University of Michigan Flint",
+			"url": "",
+			"area": "Computer Science",
+			"studyType": "Bachelors of Science",
+			"startDate": "2007",
+			"endDate": "2012",
+			"score": "",
+			"courses": [
+				"Java",
+				"C++",
+				"Networking",
+				"Data Structures and Algorithms",
+				"Web Development",
+				"Software Development",
+				"System Administraiton",
+				"Assembly Language",
+				"Circuit Design",
+				"Logic"
+			]
+		}
+	],
+	"awards": [],
+	"certificates": [],
+	"publications": [],
+	"skills": [
+		{
+			"name": "Web development",
+			"level": "",
+			"keywords": [
+				"CSS",
+				"HTML",
+				"Javascript",
+				"Liquid / LiquidJS",
+				"Mustache / Handlebars",
+				"AG Grid"
+			]
+		},
+		{
+			"name": "Scripting",
+			"level": "",
+			"keywords": [
+				"Bash / Linux",
+				"Python",
+				"Powershell",
+				"Windows Command Line",
+				"MacOS Z Shell",
+				"Android ADB"
+			]
+		},
+		{
+			"name": "Applications / Tools",
+			"level": "",
+			"keywords": [
+				"Microsoft Office",
+				"Adobe Creative Suite",
+				"Microsoft Azure",
+				"Eclipse",
+				"Git",
+				"Jenkins",
+				"Subversion",
+				"Hashi Vault",
+				"Autosys"
+			]
+		},
+		{
+			"name": "Java",
+			"level": "",
+			"keywords": [
+				"Java SE 17",
+				"Springbatch / Springboot",
+				"JUnit"
+			]
+		},
+		{
+			"name": "AI",
+			"level": "",
+			"keywords": [
+				"Stable Diffusion",
+				"ChatGPT prompts",
+				"Keras"
+			]
+		},
+		{
+			"name": "Other",
+			"level": "",
+			"keywords": [
+				"Regex",
+				"SQL",
+				"XML",
+				"JSON"
+			]
+		}
+	],
+	"languages": [],
+	"interests": [
+		{
+			"name": "Art",
+			"keywords": [
+				"Photography",
+				"Digital Illustration",
+				"Design"
+			]
+		},
+		{
+			"name": "Music",
+			"keywords": [
+				"Attending concerts",
+				"Playing instruments",
+				"Recording music / audio"
+			]
+		}
+	],
+	"references": [],
+	"projects": []
 }
