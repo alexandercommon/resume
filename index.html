@@ -342,47 +342,35 @@
 							<h3 class="name">{{institution}}</h3>
 							{{/if}}
 						</header>
+						{{#if area}}
+						<span class="position">
+							{{area}}
+						</span>
+						{{/if}}
 						
-						<div class="dates">
-							{{#if startDate}}
-							<span class="startDate">
-								{{startDate}}
-							</span>
-							{{/if}}
-							{{#if endDate}}
-							<span class="endDate">
-								- {{endDate}}
-							</span>
-							{{else}}
-							<span class="endDate">
-								- Present
-							</span>
-							{{/if}}
+						{{#if startDate}}
+						<span class="startDate">
+							{{startDate}}
+						</span>
+						{{/if}}
+						{{#if endDate}}
+						<span class="endDate">
+							- {{endDate}}
+						</span>
+						{{else}}
+						<span class="endDate">
+							- Present
+						</span>
+						{{/if}}
+						
+						{{#if summary}}
+						<div class="summary">
+							<p>{{summary}}</p>
 						</div>
-						
-						<div class="qualification">
-							{{#if studyType}}
-							<span class="studyType">
-								{{studyType}}
-							</span>
-							{{/if}}
-							
-							{{#if area}}
-							<span class="area">
-								- {{area}}
-							</span>
-							{{/if}}
-							
-							{{#if gpa}}
-							<span class="gpa">
-								GPA: {{gpa}}
-							</span>
-							{{/if}}
-						</div>
-						
-						{{#if highlights.length}}
+						{{/if}}
+						{{#if courses.length}}
 						<ul class="highlights">
-							{{#each highlights}}
+							{{#each courses}}
 							<li>{{.}}</li>
 							{{/each}}
 						</ul>
@@ -397,18 +385,21 @@
 					<h2>Awards</h2>
 					{{#each resume.awards}}
 					<div class="item">
-						{{#if title}}
+						<header>
+							{{#if title}}
 							<h3 class="name">{{title}}</h3>
-						{{/if}}
-						{{#if date}}
-						<div class="date">
-							{{date}}
-						</div>
-						{{/if}}
+							{{/if}}
+						</header>
 						{{#if awarder}}
-						<div class="awarder">
+						<span class="position">
 							{{awarder}}
-						</div>
+						</span>
+						{{/if}}
+						
+						{{#if date}}
+						<span class="startDate">
+							{{date}}
+						</span>
 						{{/if}}
 						{{#if summary}}
 						<div class="summary">
