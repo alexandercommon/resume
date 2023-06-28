@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.23.1/src-min-noconflict/ace.js"></script>
+  <title>ACE in Action</title>
+  <style type="text/css">
+  </style>
+</head>
+<body>
+
+	<style>
+		input {
+			padding: 5px;
+			margin: 5px;
+		}
+		table {
+			border:1px solid #b3adad;
+			border-collapse:collapse;
+			padding:5px;
+		}
+		table th {
+			border:1px solid #b3adad;
+			padding:5px;
+			background: #f0f0f0;
+			color: #000;
+		}
+		table td {
+			border:1px solid #b3adad;
+			text-align:center;
+			padding:5px;
+			background: #ffffff;
+			color: #313030;
+		}
+		#editor {
+			min-height: 20px;
+		   width: 800px; 
+		   max-width: 100%; 
+		   overflow: hidden;
+		   border: 1px solid black;
+		}
+		#editor2 {
+			min-height: 20px;
+		   width: 800px; 
+		   max-width: 100%; 
+		   overflow: hidden; 
+		   border: 1px solid black;
+		}
+		
+		h2 {
+			margin: 3px 3px;
+		}
+
+	</style>
+
+<table>
+    <tr>
+        <th colspan="3"><h2>Users</h2></th>
+    </tr>
+    <tr>
+        <th>user_id (PK)</th>
+        <th>name</th>
+        <th>phone</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Person1</td>
+        <td>person1@gmail.com</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Person2</td>
+        <td>person2@yahoo.com</td>
+    </tr>
+</table>
+
+<br>
+
+<table>
+    <tr>
+        <th colspan="5"><h2>Locations</h2></th>
+    </tr>
+    <tr>
+        <th>location_id (PK)</th>
+        <th>location_name</th>
+        <th>location_zip</th>
+        <th>current_weather</th>
+        <th>previous_weather</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>New York</td>
+        <td>Sunny</td>
+        <td>Rainy</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Miami</td>
+        <td>Sunny</td>
+        <td>Sunny</td>
+    </tr>
+</table>
+
+<br>
+
+<table>
+    <tr>
+        <th colspan="2"><h2>UserLocations</h2></th>
+    </tr>
+    <tr>
+        <th>user_id (FK)</th>
+        <th>location_id (FK)</th>
+    </tr>
+    <tr>
+        <td>1 (Person 1)</td>
+        <td>1 (New York)</td>
+    </tr>
+    <tr>
+        <td>1 (Person 1)</td>
+        <td>2 (Miami)</td>
+    </tr>
+    <tr>
+        <td>2 (Person 2)</td>
+        <td>2 (Miami)</td>
+    </tr>
+</table>
+<br><br>
+
+<h2>Batch Job Example</h2>
+<div id="editor">function runBatchJob() {
+
+    locations = executeSQL("SELECT * FROM Locations");
+
+    List<Location> updatedLocations = [];
+
+    for (location in locations) {
+    
+        new_weather = getCurrentWeather(location.location_zip);
+
+        if (current_weather != location.current_weather) {
+        
+            updatedLocation = { 
+                'id': location.location_id , 
+                'current_weather': new_weather, 
+                'previous_weather': location.current_weather 
+            };
+            updatedLocations.append(updatedLocation);
+        }
+    }
+
+    if (updatedLocations.size > 0) {
+        updateLocationTable(updatedLocations);
+    }
+
+    SQL = "SELECT DISTINCT Users.* FROM Users 
+          INNER JOIN UserLocations ON Users.user_id = UserLocations.user_id 
+          INNER JOIN Locations ON UserLocations.location_id = Locations.location_id 
+          WHERE Locations.current_weather != Locations.previous_weather"
+    users = executeSQL(SQL);
+
+    for (user in users) {
+        SQL = "SELECT Locations.* FROM Locations 
+              INNER JOIN UserLocations ON Locations.location_id  = UserLocations.location_id  
+              WHERE UserLocations.user_id = {user.user_id} AND Locations.current_weather != Locations.previous_weather"
+        userupdatedLocationss = executeSQL(SQL);
+
+        for (updatedLocations in userupdatedLocationss) {
+            sendText(user.phone, "Weather at {location.location_name} has changed to {location.current_weather});
+        }
+    }
+}</div>
+
+<br><br>
+<h2>Add User Example</h2>
+<div id="editor2">
+function addUser(phone, location_name, location_zip) {
+    SQL = "SELECT * FROM Locations WHERE location_name = {location_name}"
+    existingLocation = executeSQL(SQL);
+
+    if (existingLocation is empty) {
+		weather = getCurrentWeather(location.location_zip);
+        SQL = "INSERT INTO Locations (location_name, location_zip, current_weather, previous_weather) VALUES ({location_name}, {location_zip}, {weather}, {NULL})"
+        executeSQL(SQL);
+    }
+
+    // Add the user to the Users table
+    SQL = "INSERT INTO Users (phone) VALUES ({phone})"
+    executeSQL(SQL);
+
+    SQL = "SELECT location_id FROM Locations WHERE location_name = {location_name}"
+    location_id = executeSQL(SQL);
+
+    SQL: "INSERT INTO UserLocations (user_id, location_id) VALUES ((SELECT user_id FROM Users WHERE phone = {phone}), {location_id})"
+    executeSQL();
+}
+
+</div>
+<br><br>
+
+<script>
+  var editor = ace.edit("editor", {
+    theme: "ace/theme/textmate",
+    mode: "ace/mode/java",
+    autoScrollEditorIntoView: true,
+    maxLines: Infinity,
+	fontSize: 14,
+	wrap: true,
+	wrapMethod: 'auto'
+  });
+  
+  var editor2 = ace.edit("editor2", {
+    theme: "ace/theme/textmate",
+    mode: "ace/mode/java",
+    autoScrollEditorIntoView: true,
+    maxLines: Infinity,
+	fontSize: 14,
+	wrap: true,
+	wrapMethod: 'auto'
+  });
+
+  function update() {
+    // Get the number of lines
+    var lines = editor.session.getLength();
+
+    // Get the height of a single line
+    var lineHeight = editor.renderer.lineHeight;
+
+    // Set the height of the editor
+    editor.container.style.height = `${lines * lineHeight + 10}px`;
+
+	var contentWidth = editor.container.clientWidth;
+
+    // Set the width of the editor
+    editor.container.style.width = editor.container.clientWidth;
+
+    // Update the editor
+    editor.resize();
+  }
+  
+  function update2() {
+    // Get the number of lines
+    var lines = editor2.session.getLength();
+
+    // Get the height of a single line
+    var lineHeight = editor2.renderer.lineHeight;
+
+    // Set the height of the editor
+    editor2.container.style.height = `${lines * lineHeight + 10}px`;
+
+	var contentWidth = editor2.container.clientWidth;
+
+    // Set the width of the editor
+    editor2.container.style.width = editor2.container.clientWidth;
+
+    // Update the editor
+    editor2.resize();
+  }
+
+  editor2.session.on('change', update2);
+  update2();
+
+</script>
+</body>
+</html>
