@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "University of Michigan - Flint",
-			"position": "Teacher's Assisitant - Digital Logic, and Programming classes",
+			"position": "Teacher's Assistant - Digital Logic, and Programming classes",
 			"url": "",
 			"startDate": "2010",
 			"endDate": "2012",
@@ -83,11 +83,11 @@
 			"url": "https://mrpeace.org/",
 			"startDate": "2015",
 			"endDate": "current",
-			"summary": "Development and implementation of marketing strategies, including photography, audio recording, and video recording. Other duties included website development and maintenance, business strategy and growth brainstorming, and general assistance",
+			"summary": "Developed  and implementation of marketing strategies, including photography, audio recording, and video recording. Other duties included website development and maintenance, business strategy and growth brainstorming, and general assistance",
 			"highlights": [
 				"Organized and centralized documentation and records",
 				"Created small-scale customer-resource management solution",
-				"Develeoped new website",
+				"Developed new website",
 				"Shot and created numerous music videos",
 				"Recorded numerous music albums",
 				"Coordinated production of promotional material"
@@ -137,7 +137,7 @@
 				"Data Structures and Algorithms",
 				"Web Development",
 				"Software Development",
-				"System Administraiton",
+				"System Administration",
 				"Assembly Language",
 				"Circuit Design",
 				"Logic"
@@ -251,3 +251,5 @@
 	"references": [],
 	"projects": []
 }
+
+
