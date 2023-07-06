@@ -209,12 +209,25 @@
 			]
 		},
 		{
-			"name": "Java",
+			"name": "Coding",
 			"level": "",
 			"keywords": [
-				"Java SE 17",
+				"Python",
+				"Java",
+				"Javascript",
+				"SQL",
+				"Regex",
+				"Assembly",
 				"Springbatch / Springboot",
-				"JUnit"
+				"JUnit",
+				"PHP",
+				"ASP.NET",
+				"C#",
+				"C",
+				"C++",
+				"Basic",
+				"XML",
+				"JSON"
 			]
 		},
 		{
