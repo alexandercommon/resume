@@ -229,16 +229,6 @@
 				"XML",
 				"JSON"
 			]
-		},
-		{
-			"name": "Other",
-			"level": "",
-			"keywords": [
-				"Regex",
-				"SQL",
-				"XML",
-				"JSON"
-			]
 		}
 	],
 	"languages": [],
