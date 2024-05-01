@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questionnaire</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 540px;  /* or any value that fits your design */
+        }
+        .yesno {
+            width: 150px;
+        }
+    </style>
+</head>
+<body class="container py-4">
+    <div id="intro" class="text-center">
+        <h1 class="mb-4">Welcome to the AI cat name generator!</h1>
+		<p>Enter 100 words or so for each answer. Skip questions if you want. We won't save or keep your data.</p>
+        <button class="btn btn-primary" onclick="start()">Get started</button>
+    </div>
+
+    <div id="questionContainer" class="mt-4" style="display: none;">
+        <h4 id="questionText" class="mb-3"></h4>
+        <div id="answerText" class="form-group" style="display: none;">
+            <input type="text" class="form-control" id="textAnswer" placeholder="Your answer" maxlength="400">
+        </div>
+        <div id="answerYesNo" class="form-group" style="display: none;">
+            <select class="form-control yesno" id="yesNoAnswer" onchange="handleYesNoChange(this.value)">
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <input type="text" class="form-control mt-2" id="conditionalText" style="display: none;" placeholder="Additional info" maxlength="400">
+        </div>
+		<div class="form-group" id="answerBool" style="display: none;">
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="boolAnswer" id="boolYes" value="Yes">
+				<label class="form-check-label" for="boolYes">
+					Yes
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="boolAnswer" id="boolNo" value="No">
+				<label class="form-check-label" for="boolNo">
+					No
+				</label>
+			</div>
+		</div>
+        <button class="btn btn-success mt-3" onclick="nextQuestion()">Next</button>
+		<button class="btn btn-primary mt-3" id="skipButton" onclick="nextQuestion()">Skip</button>
+		<button id="backButton" class="btn btn-warning mt-3" onclick="previousQuestion()">Back</button>
+		<br>
+        <button class="btn btn-danger mt-3" onclick="location.reload()">Restart</button>
+		
+    </div>
+
+    <div id="resultContainer" class="mt-4" style="display: none;">
+        <h2>Result</h2>
+        <table class="table table-striped" id="resultTable">
+            <thead id="resultHeader"></thead>
+            <tbody id="resultBody"></tbody>
+        </table>
+    </div>
+    <script>
+		var questions = [
+			{ text: 'What does kitty look like?', type: 'text', placeholder: '' },
+			{ text: 'Describe their personality', type: 'text', placeholder: '' },
+			{ text: 'Boy or girl?', type: 'text', placeholder: '' },
+			{ text: 'Any names to avoid?', type: 'text', placeholder: '' },
+			{ text: 'Are there any stories, shows, movies, etc. that you enjoy?', type: 'text', placeholder: '' },
+			{ text: 'Is there any style or aesthetic that you enjoy?', type: 'text', placeholder: '' },
+			{ text: 'Is there a culture or history you would like to reference?', type: 'text', placeholder: '' },
+			{ text: 'What are your hobbies?', type: 'text', placeholder: '' },
+			{ text: 'What sort of area do you live in?', type: 'text', placeholder: '' },
+			{ text: 'Do you like people names?', type: 'bool', placeholder: '' },
+			{ text: 'Do you like serious names?', type: 'bool', placeholder: '' },
+			{ text: 'Do you like silly names?', type: 'bool', placeholder: '' },
+			{ text: 'Are cliché or popular names ok?', type: 'bool', placeholder: '' },
+			{ text: 'Any example names', type: 'text', placeholder: '' },
+		];
+		var answers = {};
+		var currentQuestion = 0;
+
+		function start() {
+			document.getElementById('textAnswer').addEventListener('keyup', function(event) {
+				// Number 13 is the "Enter" key on the keyboard
+				if (event.keyCode === 13) {
+					// Cancel the default action, if needed
+					event.preventDefault();
+					// Trigger the button element with a click
+					nextQuestion();
+				}
+			});
+			document.getElementById('intro').style.display = 'none';
+			document.getElementById('questionContainer').style.display = 'block';
+			displayQuestion();
+		}
+
+		function displayQuestion() {
+			var question = questions[currentQuestion];
+			document.getElementById('questionText').innerText = question.text;
+			
+			document.getElementById('textAnswer').value = '';
+			document.getElementById('yesNoAnswer').value = '';
+			document.getElementById('conditionalText').value = '';
+			document.getElementById('boolYes').checked = false;
+			document.getElementById('boolNo').checked = false;
+			
+			if (currentQuestion <= 0) {
+				document.getElementById('backButton').style.display = 'none';
+			} else {
+				document.getElementById('backButton').style.display = 'inline-block';
+			}
+			
+			if (question.type === 'text') {
+				document.getElementById('answerText').style.display = 'block';
+				document.getElementById('answerYesNo').style.display = 'none';
+				document.getElementById('answerBool').style.display = 'none';  // Add this line
+			} else if (question.type === 'yesno') {
+				document.getElementById('answerYesNo').style.display = 'block';
+				document.getElementById('answerText').style.display = 'none';
+				document.getElementById('answerBool').style.display = 'none';  // Add this line
+			} else if (question.type === 'bool') {
+				document.getElementById('answerBool').style.display = 'block';
+				document.getElementById('answerText').style.display = 'none';
+				document.getElementById('answerYesNo').style.display = 'none';  // Add this line
+			}
+		}
+
+		function nextQuestion() {
+			var question = questions[currentQuestion];
+			if (question.type === 'text') {
+				answers[question.text] = document.getElementById('textAnswer').value;
+			} else if (question.type === 'yesno') {
+				var yesNoAnswer = document.getElementById('yesNoAnswer').value;
+				if (yesNoAnswer === 'yes') {
+					answers[question.text] = document.getElementById('conditionalText').value;
+				} else if (yesNoAnswer === 'no') {
+					answers[question.text] = 'No';
+				}
+			} else if (question.type === 'bool') {
+				if (document.getElementById('boolYes').checked) {
+					answers[question.text] = 'Yes';
+				} else if (document.getElementById('boolNo').checked) {
+					answers[question.text] = 'No';
+				}
+			}
+			currentQuestion++;
+			if (currentQuestion < questions.length) {
+				displayQuestion();
+			} else {
+				document.getElementById('questionContainer').style.display = 'none';
+				sendAnswers();
+			}
+		}
+
+		function previousQuestion() {
+			if (currentQuestion <= 0) {
+				return;
+			}
+			currentQuestion--;
+			var question = questions[currentQuestion];
+			var previousAnswer = answers[question.text];
+			document.getElementById('questionText').innerText = question.text;
+			if (question.type === 'text') {
+				document.getElementById('textAnswer').value = previousAnswer;
+				document.getElementById('textAnswer').style.display = 'block';
+				document.getElementById('answerYesNo').style.display = 'none';
+				document.getElementById('answerBool').style.display = 'none';
+			} else if (question.type === 'yesno') {
+				document.getElementById('answerYesNo').value = previousAnswer === 'No' ? 'No' : 'Yes';
+				if (previousAnswer !== 'No') {
+					document.getElementById('conditionalText').value = previousAnswer;
+					document.getElementById('conditionalText').style.display = 'block';
+				}
+				document.getElementById('answerYesNo').style.display = 'block';
+				document.getElementById('textAnswer').style.display = 'none';
+				document.getElementById('answerBool').style.display = 'none';
+			} else if (question.type === 'bool') {
+				if (previousAnswer === 'Yes') {
+					document.getElementById('boolYes').checked = true;
+				} else if (previousAnswer === 'No') {
+					document.getElementById('boolNo').checked = true;
+				}
+				document.getElementById('answerBool').style.display = 'block';
+				document.getElementById('textAnswer').style.display = 'none';
+				document.getElementById('answerYesNo').style.display = 'none';
+			}
+			if (currentQuestion <= 0) {
+				document.getElementById('backButton').style.display = 'none';
+			}
+		}
+
+
+		function skipQuestion() {
+			currentQuestion++;
+			displayQuestion();
+		}
+
+		function sendAnswers() {
+			// Modify this function to send the answers to the API and handle the response
+			fetch('https://us-central1-catnames-394614.cloudfunctions.net/SubmitNames', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(answers),
+			})
+			.then(response => response.json())
+			.then(data => displayResult(data.csv))
+			/*.then(data => displayResult(`Name,Reason
+				doug,It's awesome
+				chuck,Just funny!`));*/
+			.then(data => console.log(data));
+		}
+
+		function handleYesNoChange(value) {
+			if (value === 'yes') {
+				document.getElementById('conditionalText').style.display = 'block';
+			} else {
+				document.getElementById('conditionalText').style.display = 'none';
+			}
+		}
+
+		function displayResult(csv) {
+			document.getElementById('resultContainer').style.display = 'block';
+			var lines = csv.split('\n');
+			var header = lines[0].split(',');
+			var headerHtml = '<tr>' + header.map(col => '<td><h4>' + col + '</h4></td>').join('') + '</tr>';
+			document.getElementById('resultHeader').innerHTML = headerHtml;
+			var bodyHtml = lines.slice(1).map(line => {
+				var cols = line.split(',');
+				return '<tr>' + cols.map(col => '<td>' + col + '</td>').join('') + '</tr>';
+			}).join('');
+			document.getElementById('resultBody').innerHTML = bodyHtml;
+		}
+		
+		
+	</script>
+</body>
+</html>
