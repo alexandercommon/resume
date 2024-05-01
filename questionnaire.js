@@ -141,15 +141,7 @@ function handleYesNoChange(value) {
     }
 }
 
-function displayResult(csv) {
+function displayResult(text) {
     document.getElementById('resultContainer').style.display = 'block';
-    var lines = csv.split('\n');
-    var header = lines[0].split(',');
-    var headerHtml = '<tr>' + header.map(col => '<td><h4>' + col + '</h4></td>').join('') + '</tr>';
-    document.getElementById('resultHeader').innerHTML = headerHtml;
-    var bodyHtml = lines.slice(1).map(line => {
-        var cols = line.split(',');
-        return '<tr>' + cols.map(col => '<td>' + col + '</td>').join('') + '</tr>';
-    }).join('');
-    document.getElementById('resultBody').innerHTML = bodyHtml;
+    document.getElementById('resultText').innerText = text; // Displaying the text in a specified element
 }
