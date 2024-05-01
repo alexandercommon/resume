@@ -199,20 +199,16 @@
 		}
 
 		function sendAnswers() {
-			// Modify this function to send the answers to the API and handle the response
-			fetch('https://us-central1-catnames-394614.cloudfunctions.net/SubmitNames', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(answers),
-			})
-			.then(response => response.json())
-			.then(data => displayResult(data.csv))
-			/*.then(data => displayResult(`Name,Reason
-				doug,It's awesome
-				chuck,Just funny!`));*/
-			.then(data => console.log(data));
+		    fetch('https://us-central1-catnames-394614.cloudfunctions.net/SubmitNames', {
+			method: 'POST',
+			headers: {
+			    'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(answers),
+		    })
+		    .then(response => response.text()) // Process response as text
+		    .then(text => displayResult(text)) // Display the text
+		    .catch(error => console.error('Error:', error)); // Log any errors
 		}
 
 		function handleYesNoChange(value) {
@@ -223,19 +219,9 @@
 			}
 		}
 
-		function displayResult(csv) {
-			document.getElementById('resultContainer').style.display = 'block';
-			var lines = csv.split('\n');
-			var header = lines[0].split(',');
-			var headerHtml = '<tr>' + header.map(col => '<td><h4>' + col + '</h4></td>').join('') + '</tr>';
-			document.getElementById('resultHeader').innerHTML = headerHtml;
-			var bodyHtml = lines.slice(1).map(line => {
-				var cols = line.split(',');
-				return '<tr>' + cols.map(col => '<td>' + col + '</td>').join('') + '</tr>';
-			}).join('');
-			document.getElementById('resultBody').innerHTML = bodyHtml;
+		function displayResult(text) {
+		    document.getElementById('resultBody').innerHTML = text; // Set the text into an element
 		}
-		
 		
 	</script>
 </body>
