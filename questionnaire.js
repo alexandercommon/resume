@@ -121,7 +121,6 @@ function skipQuestion() {
 }
 
 function sendAnswers() {
-    // Modify this function to send the answers to the API and handle the response
     fetch('https://us-central1-catnames-394614.cloudfunctions.net/SubmitNames', {
         method: 'POST',
         headers: {
@@ -129,12 +128,9 @@ function sendAnswers() {
         },
         body: JSON.stringify(answers),
     })
-    .then(response => response.json())
-    .then(data => displayResult(data.csv));
-    /*.then(data => displayResult(`Name,Reason
-        doug,It's awesome
-        chuck,Just funny!`));*/
-	.then(data => console.log(data));
+    .then(response => response.text())  // Ensuring the response is treated as plain text
+    .then(text => displayResult(text))  // Passing the text response to be displayed
+    .catch(error => console.error('Error:', error));  // Handling potential errors
 }
 
 function handleYesNoChange(value) {
