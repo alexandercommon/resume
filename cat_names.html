@@ -205,6 +205,10 @@
 
 		function sendAnswers() {
 			document.getElementById('waitingScreen').style.display = 'block';
+			 if (answers['Any names to avoid?']) {
+				answers['Any names to avoid?'] += ', ';
+			}
+			answers['Any names to avoid?'] += 'Smokey, Raven, Midnight, Fluffy, Whisker, Cat, Boots, Onyx, Garfield, Muffin';
 		    fetch('https://us-central1-catnames-394614.cloudfunctions.net/SubmitNames', {
 			method: 'POST',
 			headers: {
