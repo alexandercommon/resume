@@ -62,6 +62,12 @@
             <tbody id="resultBody"></tbody>
         </table>
     </div>
+    <div id="waitingScreen" class="mt-4 text-center" style="display: none;">
+        <h4>Please wait while we generate names...</h4>
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">What a cute kitty! We're thinking of some names...</span>
+        </div>
+    </div>
     <script>
 		var questions = [
 			{ text: 'What does kitty look like?', type: 'text', placeholder: '' },
@@ -199,6 +205,7 @@
 		}
 
 		function sendAnswers() {
+			document.getElementById('waitingScreen').style.display = 'block';
 		    fetch('https://us-central1-catnames-394614.cloudfunctions.net/SubmitNames', {
 			method: 'POST',
 			headers: {
@@ -207,8 +214,14 @@
 			body: JSON.stringify(answers),
 		    })
 		    .then(response => response.text()) // Process response as text
-		    .then(text => displayResult(text)) // Display the text
-		    .catch(error => console.error('Error:', error)); // Log any errors
+			.then(text => {//.then(text => displayResult(text)) // Display the text
+				document.getElementById('waitingScreen').style.display = 'none';
+				displayResult(text);
+			})
+		    .catch(error => {
+				document.getElementById('waitingScreen').style.display = 'none';
+				console.error('Error:', error);
+			});
 		}
 
 		function handleYesNoChange(value) {
