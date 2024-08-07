@@ -232,11 +232,25 @@
 		}
 
 		function displayResult(text) {
-		    document.getElementById('resultContainer').style.display = 'block';
-		    var namesList = text.split(/ (?=\d+)/).map(name => name.trim());
-		    // Joining the names with a new line character
-		    var formattedText = namesList.join('\n');
-		    document.getElementById('resultBody').innerText = formattedText;
+			document.getElementById('resultContainer').style.display = 'block';
+			try {
+				// Try to parse the response as HTML
+				var parser = new DOMParser();
+				var doc = parser.parseFromString(text, 'text/html');
+				var htmlContent = doc.body.innerHTML.trim();
+
+				if (htmlContent) {
+					// If the parsed content is not empty, display it as HTML
+					document.getElementById('resultBody').innerHTML = htmlContent;
+				} else {
+					throw new Error('Empty HTML content');
+				}
+			} catch (e) {
+				// If parsing fails, display the text content
+				var namesList = text.split(/ (?=\d+)/).map(name => name.trim());
+				var formattedText = namesList.join('\n');
+				document.getElementById('resultBody').innerText = formattedText;
+			}
 		}
 		
 	</script>
