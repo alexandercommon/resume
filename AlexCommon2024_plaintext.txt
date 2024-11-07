@@ -29,7 +29,7 @@ Highlights:
 **Computer Science Corporation / Pratt & Whitney, and Sikorsky**
 Position: Software Developer
 Duration: 2012 June - 2016 April
-Summary: Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.
+Summary: Contracted to Pratt & Whitney. Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.
 Highlights:
 - Automated SQL patching, freeing developers to focus on other tasks
 - Solved a number of problems previously thought unsolvable, including developing methods to change user input screens on-the-fly and overcoming out-of-the-box limitations
