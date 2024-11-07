@@ -38,12 +38,12 @@
 			]
 		},
 		{
-			"name": "Computer Science Corporation - Pratt & Whitney, and Sikorsky",
+			"name": "Computer Science Corporation / Pratt & Whitney, and Sikorsky",
 			"position": "Software Developer",
 			"url": "",
 			"startDate": "2012 June",
 			"endDate": "2016 April",
-			"summary": "Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.",
+			"summary": "Contracted to Pratt & Whitney. Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.",
 			"highlights": [
 				"Automated SQL patching, freeing developers to focus on other tasks",
 				"Solved a number of problems previously thought unsolvable, including developing methods to change user input screens on-the-fly and overcoming out-of-the-box limitations",
