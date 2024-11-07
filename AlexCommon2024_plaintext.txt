@@ -26,7 +26,7 @@ Highlights:
 - Migrated team data from Sharepoint to Azure
 
 
-**Computer Science Corporation - Pratt & Whitney, and Sikorsky**
+**Computer Science Corporation / Pratt & Whitney, and Sikorsky**
 Position: Software Developer
 Duration: 2012 June - 2016 April
 Summary: Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.
