@@ -6,7 +6,7 @@
 		"email": "jobs@alexcommon.com",
 		"phone": "",
 		"url": "",
-		"summary": "An information technology professional with 14 years of experience, specializing in process improvement, documentation, requirements gathering & analysis, and automation.",
+		"summary": "An information technology professional with 15 years of experience, specializing in process improvement, documentation, requirements gathering & analysis, and automation.",
 		"location": {
 			"address": "",
 			"city": "Ferndale",
@@ -18,21 +18,23 @@
 	},
 	"work": [
 		{
-			"name": "GM / Onstar",
+			"name": "General Motors / Onstar",
 			"position": "Software Developer",
 			"url": "",
 			"startDate": "2016 May",
 			"endDate": "2023 May",
-			"summary": "Primary responsibilities include upgrading and maintaining the OnStar billing systems. Also, researching potential improvements, creating and maintaining documentation, and corporate compliance. Worked in a close-knit team oriented environment. Delivering objects under tight deadlines in fast-paced, client-oriented environment",
+			"summary": "Primary responsibilities include maintaining and upgrading the OnStar billing systems, security, and reliability. Daily tasks involved developing and optimizing Java APIs and batch jobs, maintaining and administering Linux environments with minor sysadmin tasks, managing and enhancing cloud code build pipelines, overseeing code scanning processes, and automating deployments. maintaining, improving, and facilitating cloud billing solution setup and interaction with local systems, ensuring corporate and legal compliance, and also creating and maintaining high and low level documentation. Delivering projects under tight deadlines in fast-paced, client-oriented environment.",
 			"highlights": [
 				"Automated month-end billing process",
-				"Designed and implemented HTML invoice templates for the Middle East",
-				"Converted old MS Word invoices into HTML & Liquid",
 				"Co-implemented tax reporting workflow for Mexico",
+				"Automated complex cloud deployment solution with Azure",
+				"Improved new billing workflow error reporting procedure",
+				"Designed and implemented HTML invoice templates for the Middle East",
 				"Automated product catalog comparison",
-				"Implemented SSH key authentication to improve server security",
+				"Converted old MS Word invoices into HTML & Liquid",
+				"Strengthened server security by researching, testing, and implementing an improved authentication mechanism",
 				"Researched and facilitated database encryption to protect consumer information",
-				"Improved new workflow error reporting procedure"
+				"Migrated team data from Sharepoint to Azure"
 			]
 		},
 		{
@@ -41,7 +43,7 @@
 			"url": "",
 			"startDate": "2012 June",
 			"endDate": "2016 April",
-			"summary": "Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system",
+			"summary": "Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.",
 			"highlights": [
 				"Automated SQL patching, freeing developers to focus on other tasks",
 				"Solved a number of problems previously thought unsolvable, including developing methods to change user input screens on-the-fly and overcoming out-of-the-box limitations",
@@ -86,11 +88,11 @@
 			"summary": "Developed  and implementation of marketing strategies, including photography, audio recording, and video recording. Other duties included website development and maintenance, business strategy and growth brainstorming, and general assistance",
 			"highlights": [
 				"Organized and centralized documentation and records",
-				"Created small-scale customer-resource management solution",
+				"Created custom customer-resource management solution",
 				"Developed new website",
 				"Shot and created numerous music videos",
 				"Recorded numerous music albums",
-				"Coordinated production of promotional material"
+				"Coordinated production of marketing material"
 			]
 		},
 		{
@@ -99,7 +101,7 @@
 			"url": "https://ferndalecatshelter.org/",
 			"startDate": "2022 Jun",
 			"endDate": "current",
-			"summary": "Interact with visitors, answer any questions about the shelter and adoption, and ensure cats and visitors get along. Other tasks include cleaning up and opening the shelter if necessary, as well as occasional visitor check-in and cash register duties",
+			"summary": "Customer service, interacting with visitors, answering any questions about the shelter and adoption, and ensuring cats and visitors get along. Cleaning up and opening the shelter if necessary, as well as visitor check-in and cash register operations.",
 			"highlights": []
 		},
 		{
@@ -113,7 +115,7 @@
 		},
 		{
 			"organization": "Chabad House of Eastern Michigan",
-			"position": "Desktop Support",
+			"position": "IT Support",
 			"url": "http://116.centers.chabad.org/",
 			"startDate": "2012",
 			"endDate": "current",
@@ -159,7 +161,7 @@
 			"keywords": [
 				"Speed reading",
 				"Learning quickly",
-				"Googling / info gathering",
+				"Info gathering",
 				"Customer service",
 				"Out-of-the-box thinking",
 				"Communication",
