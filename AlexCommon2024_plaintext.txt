@@ -1,34 +1,35 @@
 https://resume.alexcommon.com/
-
 Name: Alexander Common
 Label: IT & Software Solutions
 Image: https://avatars.githubusercontent.com/u/121270128
 Email: jobs@alexcommon.com
-Phone:
+Phone: 
 Location: Ferndale, MI, 48220, USA
-Summary: An information technology professional with 14 years of experience, specializing in process improvement, documentation, requirements gathering & analysis, and automation.
+Summary: An information technology professional with 15 years of experience, specializing in process improvement, documentation, requirements gathering & analysis, and automation.
 
 
 Work Experience:
-**GM / Onstar**
+**General Motors / Onstar**
 Position: Software Developer
 Duration: 2016 May - 2023 May
-Summary: Primary responsibilities include upgrading and maintaining the OnStar billing systems. Also, researching potential improvements, creating and maintaining documentation, and corporate compliance. Worked in a close-knit team oriented environment. Delivering objects under tight deadlines in fast-paced, client-oriented environment
+Summary: Primary responsibilities include maintaining and upgrading the OnStar billing systems, security, and reliability. Daily tasks involved developing and optimizing Java APIs and batch jobs, maintaining and administering Linux environments with minor sysadmin tasks, managing and enhancing cloud code build pipelines, overseeing code scanning processes, and automating deployments. Maintaining, improving, and facilitating cloud billing solution setup and interaction with local systems, ensuring corporate and legal compliance, and also creating and maintaining high and low level documentation. Delivering projects under tight deadlines in fast-paced, client-oriented environment.
 Highlights:
 - Automated month-end billing process
-- Designed and implemented HTML invoice templates for the Middle East
-- Converted old MS Word invoices into HTML & Liquid
 - Co-implemented tax reporting workflow for Mexico
+- Automated complex cloud deployment solution with Azure
+- Improved new billing workflow error reporting procedure
+- Designed and implemented HTML invoice templates for the Middle East
 - Automated product catalog comparison
-- Implemented SSH key authentication to improve server security
+- Converted old MS Word invoices into HTML & Liquid
+- Strengthened server security by researching, testing, and implementing an improved authentication mechanism
 - Researched and facilitated database encryption to protect consumer information
-- Improved new workflow error reporting procedure
+- Migrated team data from Sharepoint to Azure
 
 
 **Computer Science Corporation - Pratt & Whitney, and Sikorsky**
 Position: Software Developer
 Duration: 2012 June - 2016 April
-Summary: Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system
+Summary: Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.
 Highlights:
 - Automated SQL patching, freeing developers to focus on other tasks
 - Solved a number of problems previously thought unsolvable, including developing methods to change user input screens on-the-fly and overcoming out-of-the-box limitations
@@ -38,21 +39,21 @@ Highlights:
 **University of Michigan - Flint**
 Position: Teacher's Assistant - Digital Logic, and Programming classes
 Duration: 2010 - 2012
-Summary:
+Summary: 
 Highlights:
 
 
 **University of Michigan - Flint**
 Position: IT Helpdesk - Desktop Support
 Duration: 2009 - 2011
-Summary:
+Summary: 
 Highlights:
 
 
 **Retail**
-Position:
+Position: 
 Duration: 2003 - 2011
-Summary:
+Summary: 
 Highlights:
 
 
@@ -63,31 +64,31 @@ Duration: 2015 - current
 Summary: Developed  and implementation of marketing strategies, including photography, audio recording, and video recording. Other duties included website development and maintenance, business strategy and growth brainstorming, and general assistance
 Highlights:
 - Organized and centralized documentation and records
-- Created small-scale customer-resource management solution
+- Created custom customer-resource management solution
 - Developed new website
 - Shot and created numerous music videos
 - Recorded numerous music albums
-- Coordinated production of promotional material
+- Coordinated production of marketing material
 
 
 **Ferndale Cat Shelter**
 Position: Visitor Service
 Duration: 2022 Jun - current
-Summary: Interact with visitors, answer any questions about the shelter and adoption, and ensure cats and visitors get along. Other tasks include cleaning up and opening the shelter if necessary, as well as occasional visitor check-in and cash register duties
+Summary: Customer service, interacting with visitors, answering any questions about the shelter and adoption, and ensuring cats and visitors get along. Cleaning up and opening the shelter if necessary, as well as visitor check-in and cash register operations.
 Highlights:
 
 
 **Pet Adoption Alternative of Warren**
 Position: Cleaning & cat socialization
 Duration: 2021 April - 2023 March
-Summary:
+Summary: 
 Highlights:
 
 
 **Chabad House of Eastern Michigan**
-Position: Desktop Support
+Position: IT Support
 Duration: 2012 - current
-Summary:
+Summary: 
 Highlights:
 
 
@@ -103,7 +104,7 @@ Eagle Scout - Boy Scouts of America (2005)
 
 
 Skills:
-Personal skills: Speed reading, Learning quickly, Googling / info gathering, Customer service, Out-of-the-box thinking, Communication, Empathy, Conflict resolution, Team cooperation, Time management
+Personal skills: Speed reading, Learning quickly, Info gathering, Customer service, Out-of-the-box thinking, Communication, Empathy, Conflict resolution, Team cooperation, Time management
 
 
 Web: CSS, HTML, Javascript, Liquid / LiquidJS, Mustache / Handlebars, AG Grid
@@ -123,5 +124,3 @@ Art: Photography, Videography, Digital Illustration, Design
 
 
 Music: Attending concerts, Playing instruments, Recording music / audio
-
-https://resume.alexcommon.com/
