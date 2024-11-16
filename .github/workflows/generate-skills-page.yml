@@ -1,10 +1,10 @@
-name: Run Python and Commit Output
+name: Generate skills page
 
 on:
   push:
     branches:
-      - main  
-  workflow_dispatch:
+      - main  # Replace 'main' with your desired branch
+  workflow_dispatch:  # Allows manual triggering of this workflow
 
 jobs:
   run-python-file:
@@ -12,21 +12,27 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true  # Ensures credentials persist for future git commands
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12.6' 
+          python-version: '3.12.6'  # Specify your Python version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Run Python script
-        run: python generate_skills_page.py
+        run: python generate_skills_page.py  # Replace with the name of your Python script
 
       - name: Commit and push changes
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add skills.html # Replace with the name of the output HTML file
-          git commit -m "Update HTML file"
-          git push
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add skills.html  # Replace with your actual output file
+          git diff --cached --exit-code || (git commit -m "Update HTML file" && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
