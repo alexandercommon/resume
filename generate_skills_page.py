@@ -142,7 +142,7 @@ for category in data["categories"]:
 html_content = html_template.format(content=content)
 
 # Write the output to an HTML file
-with open('skills_showcase.html', 'w') as file:
+with open('skills.html', 'w') as file:
     file.write(html_content)
 
-print("HTML file generated: skills_showcase.html")
+print("HTML file generated")
