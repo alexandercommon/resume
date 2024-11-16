@@ -1,0 +1,89 @@
+{
+    "categories": [
+		{
+            "categoryName": "Soft Skills",
+            "skills": [
+				{
+                    "name": "Customer Service",
+                    "level": 10
+                }, 
+				{
+                    "name": "Process Improvement and Organization",
+                    "level": 8
+                }, 
+				{
+                    "name": "Speed Reading, Learning, Information Gathering, etc.",
+                    "level": 10
+                }, 
+				{
+                    "name": "Out-of-the-Box Thinking",
+                    "level": 10
+                }
+            ]
+        },
+		{
+            "categoryName": "Technical Skills",
+            "skills": [
+				{
+                    "name": "Systems Optimization, Interconnection, and Automation",
+                    "level": 9,
+                    "info": ["7 years with GM/OnStar global billing team", "4 years with Pratt & Whitney manufacturing team"]
+
+                }, 
+				{
+                    "name": "Software Development",
+                    "level": 8
+                }, 
+				{
+                    "name": "Computer Networking",
+                    "level": 6
+                }, 
+				{
+                    "name": "Cloud Infrastructure",
+                    "level": 5.5
+                }, 
+				{
+                    "name": "IT Support",
+                    "level": 7
+                }, 
+				{
+                    "name": "Web Development",
+                    "level": 6
+                }, 
+				{
+                    "name": "Documentation",
+                    "level": 8
+                }
+            ]
+        }, 
+		{
+            "categoryName": "Creative Skills",
+            "skills": [
+				{
+                    "name": "Graphic Design",
+                    "level": 6
+                }, 
+				{
+                    "name": "Videography",
+                    "level": 6
+                }, 
+				{
+                    "name": "Photography",
+                    "level": 7
+                }, 
+				{
+                    "name": "Social Media",
+                    "level": 6
+                }, 
+				{
+                    "name": "Basic Direct Marketing",
+                    "level": 5
+                }, 
+				{
+                    "name": "Audio Production",
+                    "level": 7.5
+                }
+            ]
+        }
+    ]
+}
