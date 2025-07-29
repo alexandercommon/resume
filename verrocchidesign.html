@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Verrocchi Design | Home Renovation Specialists</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+		<!-- Font Awesome CDN -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			html {
+				scroll-behavior: smooth;
+				scroll-padding-top: 60px;
+			}
+
+			.header-text {
+				color: #756a56;
+			}
+
+			.gallery-captions {
+				font-size: 1.25em;
+			}
+
+			/* Custom primary color override */
+			.btn-hero {
+				background-color: #b4884f;
+				color: white;
+				transition: transform 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+				/* margin: 10px;  */
+				border: none;
+			}
+
+			.btn-hero:hover {
+				background-color: #99723f;
+				color: white;
+				transform: scale(1.1);
+			}
+
+			.btn-hero:active {
+				background-color: #99723f !important;
+				color: white;
+				transform: scale(1.1);
+			}
+
+			.btn-primary {
+				background-color: #756a56;
+				border-color: #756a56;
+			}
+
+			.btn-primary:hover {
+				background-color: #635a49;
+				border-color: #635a49;
+			}
+
+			.text-primary {
+				color: #756a56 !important;
+			}
+
+			.bg-primary {
+				background-color: #756a56 !important;
+			}
+
+			.border-primary {
+				border-color: #756a56 !important;
+			}
+
+			.hero {
+				position: relative;
+				height: 100vh;
+				min-height: 100vh;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				color: white;
+				background: url('https://verrocchidesign.com/wp-content/uploads/2024/09/Fairfax-Exterior-After-optimized.png') center/cover no-repeat;
+			}
+			
+			.hero-overlay {
+				background-color: rgba(0, 0, 0, 0.25);
+			}
+
+			.hero .content {
+				position: relative;
+				z-index: 1;
+				display: inline-block;
+				padding: 2rem;
+				border-radius: 0.5rem;
+				text-align: center;
+			}
+
+			.gallery-img {
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.pop-color {
+				color: #b2c7eb
+			}
+
+			.gallery-img img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			.gallery-caption {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				color: white;
+				background-color: rgba(0, 0, 0, 0.6);
+				text-align: center;
+				padding: 10px;
+			}
+
+			.team-member img {
+				width: 100%;
+				height: auto;
+				max-width: 200px;
+				border-radius: 50%;
+			}
+
+			.bg-cust {
+				background-color: #E3E5E0;
+				color: #756a56;
+			}
+
+			.navbar .nav-link {
+				font-weight: 400;
+				/* normal weight for every link */
+				padding-bottom: 0.25rem;
+				/* reserve space for the border */
+				transition: color 0.2s, border-color 0.2s;
+				border-bottom: 3px solid transparent;
+			}
+
+			/* Active link: change color and reveal the border */
+			.navbar .nav-link.active {
+				color: #756a56;
+				border-color: #756a56;
+			}
+		</style>
+	</head>
+	<body data-bs-spy="scroll" data-bs-target="#main-nav">
+		<!-- Navbar with Logo -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-cust fixed-top" id="main-nav">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="website_brown_website_brown.svg" alt="Company Logo" height="20">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#hero">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#portfolio">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#faqs">FAQs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Hero Section -->
+		<section class="hero d-flex flex-column justify-content-end min-vh-100 position-relative" id="hero">
+			<div class="container content text-white position-relative pb-5">
+				<div class="hero-overlay p-3">
+					<h1 class="display-5">Transform&nbsp;Your&nbsp;Home, One&nbsp;Detail at&nbsp;a&nbsp;Time</h1>
+					<h4 class="fw-bold pop-color">Custom&nbsp;Renovations with&nbsp;Exceptional&nbsp;Craftsmanship</h4>
+					<div class="col-12 col-md-10 col-lg-8 mx-auto">
+						<p>Expert remodeling services including cabinet replacements, custom closets, countertops, fixtures, and painting—crafted to match your unique vision.</p>
+					</div>
+					<a href="#contact" class="btn btn-hero btn-lg">Book Free Consult</a>
+				</div>
+			</div>
+		</section>
+		<!-- Features Section -->
+		<section class="py-5 bg-light" id="services">
+			<div class="container">
+				<h2 class="mb-4 text-center header-text">Our Services</h2>
+				<div class="row text-center">
+					<div class="col-md-4 mb-4">
+						<div class="d-flex align-items-center justify-content-center mb-3">
+							<i class="fas fa-pencil-ruler fa-2x text-primary me-2"></i>
+							<h4 class="mb-0">Design</h4>
+						</div>
+						<p>Each renovation begins with careful planning and personalized attention. Layouts, fixtures, and finishes are thoughtfully selected to match style, function, and vision.</p>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="d-flex align-items-center justify-content-center mb-3">
+							<i class="fas fa-shopping-cart fa-2x text-primary me-2"></i>
+							<h4 class="mb-0">Purchasing</h4>
+						</div>
+						<p>Materials are meticulously sourced to match designs, budgets, and quality expectations. Every item is hand-picked for fit and reliability.</p>
+					</div>
+					<div class="col-md-4 mb-4">
+						<div class="d-flex align-items-center justify-content-center mb-3">
+							<i class="fas fa-hammer fa-2x text-primary me-2"></i>
+							<h4 class="mb-0">Construction</h4>
+						</div>
+						<p>All work—from demolition to final touches—is handled directly in-house. Jobs are clean, efficient, and carefully managed to ensure quality results and clear communication.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-5" id="portfolio">
+			<div class="container">
+				<h2 class="mb-4 text-center header-text">Our Work</h2>
+				<!-- First row: four items -->
+				<div class="row g-3">
+					<!-- Exteriors -->
+					<div class="col-6 col-md-3">
+						<div class="position-relative">
+							<img src="https://verrocchidesign.com/wp-content/uploads/2024/10/500x500__0001_fair_exterior_a.png" alt="Exteriors" class="img-fluid">
+							<div class="position-absolute top-50 start-50 translate-middle text-center">
+								<span class="bg-dark bg-opacity-75 text-white px-3 py-1 rounded-pill text-nowrap gallery-captions"> Exteriors </span>
+							</div>
+						</div>
+					</div>
+					<!-- Kitchens -->
+					<div class="col-6 col-md-3">
+						<div class="position-relative">
+							<img src="https://verrocchidesign.com/wp-content/uploads/2024/10/500x500__0007_shor_kitchen_a4.png" alt="Kitchens" class="img-fluid">
+							<div class="position-absolute top-50 start-50 translate-middle text-center">
+								<span class="bg-dark bg-opacity-75 text-white px-3 py-1 rounded-pill text-nowrap gallery-captions"> Kitchens </span>
+							</div>
+						</div>
+					</div>
+					<!-- Primary Suites -->
+					<div class="col-6 col-md-3">
+						<div class="position-relative">
+							<img src="https://verrocchidesign.com/wp-content/uploads/2024/10/500x500__0015_shor_bed_a1.png" alt="Primary Suites" class="img-fluid">
+							<div class="position-absolute top-50 start-50 translate-middle text-center">
+								<span class="bg-dark bg-opacity-75 text-white px-3 py-1 rounded-pill text-nowrap gallery-captions"> Primary Suites </span>
+							</div>
+						</div>
+					</div>
+					<!-- Bedrooms -->
+					<div class="col-6 col-md-3">
+						<div class="position-relative">
+							<img src="https://verrocchidesign.com/wp-content/uploads/2024/10/500x500__0019_shor_bed_a3.png" alt="Bedrooms" class="img-fluid">
+							<div class="position-absolute top-50 start-50 translate-middle text-center">
+								<span class="bg-dark bg-opacity-75 text-white px-3 py-1 rounded-pill text-nowrap gallery-captions"> Bedrooms </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Second row: three items centered -->
+				<div class="row g-3 mt-3 justify-content-center">
+					<!-- Bathrooms -->
+					<div class="col-6 col-md-3">
+						<div class="position-relative">
+							<img src="https://verrocchidesign.com/wp-content/uploads/2024/10/500x500__0025_shor_bath_a1.png" alt="Bathrooms" class="img-fluid">
+							<div class="position-absolute top-50 start-50 translate-middle text-center">
+								<span class="bg-dark bg-opacity-75 text-white px-3 py-1 rounded-pill text-nowrap gallery-captions"> Bathrooms </span>
+							</div>
+						</div>
+					</div>
+					<!-- Living Rooms -->
+					<div class="col-6 col-md-3">
+						<div class="position-relative">
+							<img src="https://verrocchidesign.com/wp-content/uploads/2024/10/500x500__0031_shor_living_a2.png" alt="Living Rooms" class="img-fluid">
+							<div class="position-absolute top-50 start-50 translate-middle text-center">
+								<span class="bg-dark bg-opacity-75 text-white px-3 py-1 rounded-pill text-nowrap gallery-captions"> Living Rooms </span>
+							</div>
+						</div>
+					</div>
+					<!-- Miscellaneous -->
+					<div class="col-6 col-md-3">
+						<div class="position-relative">
+							<img src="https://verrocchidesign.com/wp-content/uploads/2024/10/500x500__0000_shor_stair_a.png" alt="Miscellaneous" class="img-fluid">
+							<div class="position-absolute top-50 start-50 translate-middle text-center">
+								<span class="bg-dark bg-opacity-75 text-white px-3 py-1 rounded-pill text-nowrap gallery-captions"> Miscellaneous </span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Meet the Team Section -->
+		<section id="about" class="py-5 bg-light">
+			<div class="container">
+				<h2 class="text-center mb-5 header-text">About Us</h2>
+				<div class="row row-cols-1 row-cols-md-2 g-4 align-items-start">
+					<!-- Team Member: Jane Smith -->
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-body d-flex gap-3">
+								<img src="https://verrocchidesign.com/wp-content/uploads/2024/08/Briana-Profile-420x420-1-optimized.png" alt="Jane Smith – Lead Designer" class="flex-shrink-0 rounded-circle" width="100" height="100">
+								<div>
+									<h5 class="card-title mb-1">Jane Smith</h5>
+									<p class="text-muted mb-2">Lead Designer</p>
+									<p class="card-text"> Briana developed a strong interest in interior design early in life, which has continued to grow throughout her career. She has successfully completed a wide range of residential projects, including kitchens, bathrooms, and full-home designs. Her work is distinguished by a high level of detail and a consistent ability to align each design with the individual personality and requirements of her clients. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Team Member: Guido Verrocchi -->
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-body d-flex gap-3">
+								<img src="https://verrocchidesign.com/wp-content/uploads/2024/08/Guido-Profile-420x420-1-optimized.png" alt="Guido Verrocchi – Construction Manager" class="flex-shrink-0 rounded-circle" width="100" height="100">
+								<div>
+									<h5 class="card-title mb-1">Guido Verrocchi</h5>
+									<p class="text-muted mb-2">Construction Manager</p>
+									<p class="card-text"> Guido refined his construction expertise in Italy and brings a globally informed perspective to projects across diverse countries and cultures. With over 25 years of experience, he is known for his professionalism, attention to detail, and dedication to delivering high-quality results. His consistent focus on excellence has earned him a reputation as a reliable and trusted professional for construction projects of all scopes and scales. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="faqs" class="py-5 bg-light">
+			<div class="container">
+				
+				<h2 class="mb-5 text-center  header-text">Frequently Asked Questions</h2>
+				<div class="row row-cols-1 row-cols-md-2 g-4">
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-header bg-white border-0">
+								<h5 class="mb-0">What is the typical timeline for a renovation project?</h5>
+							</div><div class="card-body">
+								<p class="mb-0"> Most projects take between 8 and 16 weeks from initial consultation through final walkthrough, depending on project scope. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-header bg-white border-0">
+								<h5 class="mb-0">Do you provide design services before construction?</h5>
+							</div>
+							<div class="card-body">
+								<p class="mb-0"> Yes. Our design team delivers detailed plans, 3D renderings, and material selections for client approval prior to any construction work. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-header bg-white border-0">
+								<h5 class="mb-0">How do you handle budgeting and cost control?</h5>
+							</div>
+							<div class="card-body">
+								<p class="mb-0"> We provide transparent, line‑item estimates and log any change orders for client approval before proceeding. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-header bg-white border-0">
+								<h5 class="mb-0">Are permits and inspections included?</h5>
+							</div>
+							<div class="card-body">
+								<p class="mb-0"> Yes. We obtain all required permits and coordinate inspections to ensure compliance with local building codes. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-header bg-white border-0">
+								<h5 class="mb-0">What warranties do you offer on completed work?</h5>
+							</div>
+							<div class="card-body">
+								<p class="mb-0"> We provide a one‑year workmanship warranty on all labor and coordinate manufacturer warranties on materials and fixtures. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-header bg-white border-0">
+								<h5 class="mb-0">Can I stay in my home during the renovation?</h5>
+							</div>
+							<div class="card-body">
+								<p class="mb-0"> In most cases you can remain on site; we will establish safety zones and a temporary path to minimize disruption. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-header bg-white border-0">
+								<h5 class="mb-0">What is the payment schedule and terms?</h5>
+							</div>
+							<div class="card-body">
+								<p class="mb-0"> We require a 20% deposit at contract signing, progress draws at key milestones, and the balance upon final walkthrough. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Form -->
+		<section id="contact" class="py-5">
+			<div class="container">
+				<div class="row justify-content-center ">
+					<div class="col-lg-10">
+						<div class="row">
+							<div class="col-lg-4 d-none d-lg-flex align-items-center">
+								<img src="https://www.shutterstock.com/image-photo/busy-diverse-professional-business-team-600nw-2380776443.jpg" alt="contact-image" class="img-fluid rounded-card shadow mx-auto">
+							</div>
+							<div class="col-lg-8">
+								<h2 class="header-text">Contact</h2>
+								<form id="exampleForm">
+									<div class="mb-3">
+										<label for="inputName" class="form-label">Name:</label>
+										<input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+									</div>
+									<div class="mb-3">
+										<label for="inputLocation" class="form-label">Location:</label>
+										<input type="text" class="form-control" id="inputLocation" placeholder="Detroit, MI">
+									</div>
+									<div class="mb-3">
+										<label for="inputEmail" class="form-label">Email address:</label>
+										<input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+									</div>
+									<div class="mb-3">
+										<label for="inputMessage" class="form-label">Message:</label>
+										<textarea class="form-control" id="inputMessage" rows="3"></textarea>
+									</div>
+									<button type="submit" class="btn btn-primary">Send Message</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer with Logo and Address -->
+		<footer class="text-center py-4 bg-cust">
+			<div class="container">
+				<img src="website_brown_website_brown.svg" alt="Company Logo" height="40" class="mb-3">
+				<address class="mb-2">
+					<p class="mb-0">8439 Pine Cove Dr.</p>
+					<p class="mb-0">Commerce, MI 48382</p>
+					<p class="mb-0">248-830-9419</p>
+				</address>
+				<p class="mb-0">© 2024 Verrocchi Design. All rights reserved.</p>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
