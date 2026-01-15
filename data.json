@@ -17,6 +17,17 @@
 		"profiles": []
 	},
 	"work": [
+		
+		{
+			"name": "Freelance",
+			"position": "Software / IT / General Consulting",
+			"url": "",
+			"startDate": "2023 May",
+			"endDate": "current",
+			"summary": "",
+			"highlights": [
+			]
+		},
 		{
 			"name": "General Motors / Onstar",
 			"position": "Software Developer",
