@@ -3,12 +3,16 @@ Name: Alexander Common
 Label: IT & Software Solutions
 Image: https://avatars.githubusercontent.com/u/121270128
 Email: jobs@alexcommon.com
-Phone: 
 Location: Ferndale, MI, 48220, USA
 Summary: An information technology professional with 15 years of experience, specializing in process improvement, documentation, requirements gathering & analysis, and automation.
 
 
 Work Experience:
+**Freelance**
+Position: Software / IT / General Consulting
+Duration: 2023 May - current
+
+
 **General Motors / Onstar**
 Position: Software Developer
 Duration: 2016 May - 2023 May
@@ -39,22 +43,16 @@ Highlights:
 **University of Michigan - Flint**
 Position: Teacher's Assistant - Digital Logic, and Programming classes
 Duration: 2010 - 2012
-Summary: 
-Highlights:
 
 
 **University of Michigan - Flint**
 Position: IT Helpdesk - Desktop Support
 Duration: 2009 - 2011
-Summary: 
-Highlights:
 
 
 **Retail**
-Position: 
+Position:
 Duration: 2003 - 2011
-Summary: 
-Highlights:
 
 
 Volunteer Experience:
@@ -76,20 +74,21 @@ Position: Visitor Service
 Duration: 2022 Jun - current
 Summary: Customer service, interacting with visitors, answering any questions about the shelter and adoption, and ensuring cats and visitors get along. Cleaning up and opening the shelter if necessary, as well as visitor check-in and cash register operations.
 Highlights:
+- Reorganized volunteering application system
+- Assisted with marketing and event organization
+- Made multiple website fixes
+- Repaired multiple appliances and utility items on-site
+- Countless minor process improvements suggested
 
 
 **Pet Adoption Alternative of Warren**
 Position: Cleaning & cat socialization
 Duration: 2021 April - 2023 March
-Summary: 
-Highlights:
 
 
 **Chabad House of Eastern Michigan**
 Position: IT Support
 Duration: 2012 - current
-Summary: 
-Highlights:
 
 
 Education:
