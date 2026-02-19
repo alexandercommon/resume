@@ -152,13 +152,18 @@
 		</style>
 		<style media="print">
 			body { font-size: 12px; }
-			section, .item {
-				page-break-inside: avoid;
-				break-inside: avoid;
-			}
-			h2, h3 {
-				page-break-after: avoid;
+			.experience .item header {
 				break-after: avoid;
+				page-break-after: avoid;
+			}
+			.experience .item .position,
+			.experience .item .startDate,
+			.experience .item .endDate {
+				break-after: avoid;
+				page-break-after: avoid;
+			}
+			.experience .item .highlights li {
+				break-inside: auto;
 			}
 		</style>
 		
