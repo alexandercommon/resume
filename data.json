@@ -29,24 +29,24 @@
 			]
 		},
 		{
-			"name": "General Motors / Onstar",
-			"position": "Software Developer",
-			"url": "",
-			"startDate": "2016 May",
-			"endDate": "2023 May",
-			"summary": "Primary responsibilities include maintaining and upgrading the OnStar billing systems, security, and reliability. Daily tasks involved developing and optimizing Java APIs and batch jobs, maintaining and administering Linux environments with minor sysadmin tasks, managing and enhancing cloud code build pipelines, overseeing code scanning processes, and automating deployments. Maintaining, improving, and facilitating cloud billing solution setup and interaction with local systems, ensuring corporate and legal compliance, and also creating and maintaining high and low level documentation. Delivering projects under tight deadlines in a fast-paced, client-oriented environment.",
-			"highlights": [
-				"Automated month-end billing process",
-				"Co-implemented tax reporting workflow for Mexico",
-				"Automated complex cloud deployment solution with Azure",
-				"Improved new billing workflow error reporting procedure",
-				"Designed and implemented HTML invoice templates for the Middle East",
-				"Automated product catalog comparison",
-				"Converted old MS Word invoices into HTML & Liquid",
-				"Strengthened server security by researching, testing, and implementing an improved authentication mechanism",
-				"Researched and facilitated database encryption to protect consumer information",
-				"Migrated team data from Sharepoint to Teams"
-			]
+		    "name": "General Motors / Onstar",
+		    "position": "Software Developer",
+		    "url": "",
+		    "startDate": "2016 May",
+		    "endDate": "2023 May",
+		    "summary": "Primary responsibilities include maintaining and upgrading the OnStar billing systems, security, and reliability while navigating complex government regulations across multiple global jurisdictions. Daily tasks involved developing and optimizing Java APIs and batch jobs, maintaining and administering Linux environments with sysadmin tasks, managing and enhancing cloud code build pipelines, overseeing code scanning processes, and automating deployments. Ensured international corporate and legal compliance by adapting systems to diverse regional mandates. Maintaining, improving, and facilitating cloud billing solution setup and interaction with local systems, ensuring corporate and legal compliance, and also creating and maintaining high and low level documentation. Delivering projects under tight deadlines in a fast-paced, client-oriented environment.",
+		    "highlights": [
+		        "Automated month-end accounting process for global billing systems",
+		        "Co-implemented tax reporting workflow for Mexico",
+		        "Designed and implemented new invoicing system for the Middle East, navigating complex goverment requirements for multiple countries",
+				"Modernized global invoicing from MS Word to dynamic web-based templating",
+		        "Replaced cumbersome error-prone manual code deployment with Azure pipeline",
+		        "Automated cross-environment billing system configuration",
+				"Enhanced cloud billing workflow error detection and reporting procedures",
+				"Improved internal server security mechanisms to use industry standard authentication protocols",
+		        "Researched and oversaw database encryption to protect consumer information",
+		        "Migrated and reorganized team documentation from Sharepoint to Teams"
+		    ]
 		},
 		{
 			"name": "Computer Science Corporation / Pratt & Whitney, and Sikorsky",
@@ -269,5 +269,3 @@
 	"references": [],
 	"projects": []
 }
-
-
