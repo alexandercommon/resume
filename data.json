@@ -33,7 +33,7 @@
 		    "position": "Software Developer",
 		    "url": "",
 		    "startDate": "2016 May",
-		    "endDate": "2023 May",
+		    "endDate": "2023 June",
 		    "summary": "Primary responsibilities include maintaining and upgrading the OnStar billing systems, security, and reliability while navigating complex government regulations across multiple global jurisdictions. Daily tasks involved developing and optimizing Java APIs and batch jobs, maintaining and administering Linux environments with sysadmin tasks, managing and enhancing cloud code build pipelines, overseeing code scanning processes, and automating deployments. Ensured international corporate and legal compliance by adapting systems to diverse regional mandates. Maintaining, improving, and facilitating cloud billing solution setup and interaction with local systems, ensuring corporate and legal compliance, and also creating and maintaining high and low level documentation. Delivering projects under tight deadlines in a fast-paced, client-oriented environment.",
 		    "highlights": [
 		        "Automated month-end accounting process for global billing systems",
@@ -53,7 +53,7 @@
 			"position": "Software Developer",
 			"url": "",
 			"startDate": "2012 June",
-			"endDate": "2016 April",
+			"endDate": "2016 February",
 			"summary": "Contracted to Pratt & Whitney. Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.",
 			"highlights": [
 				"Automated manual database error correction procedures",
@@ -110,7 +110,7 @@
 			"organization": "Ferndale Cat Shelter",
 			"position": "Customer Service / Volunteer Onboarding",
 			"url": "https://ferndalecatshelter.org/",
-			"startDate": "2022 Jun",
+			"startDate": "2022 June",
 			"endDate": "current",
 			"summary": "Customer service shifts once a week or as needed, including interacting with visitors, answering any questions about the shelter and adoption, and ensuring cats and visitors get along. Cleaning up and opening the shelter if necessary, as well as visitor check-in and cash register operations. Also oversees onboarding of new volunteers and related procedures remotely.",
 			"highlights": []
