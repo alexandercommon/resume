@@ -56,8 +56,8 @@
 			"endDate": "2016 April",
 			"summary": "Contracted to Pratt & Whitney. Primary responsibilities included upgrading and maintaining the Solumina manufacturing execution system, including maintaining and developing a backend Oracle database, Java APIs, and batch jobs.",
 			"highlights": [
-				"Automated SQL patching, freeing developers to focus on other tasks",
-				"Solved a number of problems previously thought unsolvable, including developing methods to change user input screens on-the-fly and overcoming out-of-the-box limitations",
+				"Automated manual database error correction procedures",
+				"Solved a number of problems previously thought unsolvable, including developing methods to change GUI elements on-the-fly overcoming out-of-the-box limitations",
 				"Discovered, implemented and maintained solution to display webpages within manufacturing program"
 			]
 		},
