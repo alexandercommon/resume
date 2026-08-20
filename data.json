@@ -195,9 +195,7 @@
 				"CSS",
 				"HTML",
 				"Javascript",
-				"Liquid / LiquidJS",
-				"Mustache / Handlebars",
-				"AG Grid"
+				"Web Templating Enginges"
 			]
 		},
 		{
@@ -242,7 +240,6 @@
 				"Springbatch / Springboot",
 				"JUnit",
 				"PHP",
-				"ASP.NET",
 				"C#",
 				"C",
 				"C++",
