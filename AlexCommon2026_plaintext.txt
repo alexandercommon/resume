@@ -11,7 +11,7 @@ Duration: 2023 May - current
 Summary: Occasional independent IT support and consulting for small clients, covering computer maintenance, website work, and general systems consulting.
 
 
-**General Motors / Onstar**
+**General Motors - Onstar Global Billing**
 Position: DevOps / Systems Engineer
 Duration: 2016 May - 2023 June
 Summary: Primary responsibilities include maintaining and upgrading the OnStar billing systems, security, and reliability while navigating complex government regulations across multiple global jurisdictions. Daily tasks involved developing and optimizing Java APIs and batch jobs, maintaining and administering Linux environments with sysadmin tasks, managing and enhancing cloud code build pipelines, overseeing code scanning processes, and automating deployments. Ensured international corporate and legal compliance by adapting systems to diverse regional mandates. Maintaining, improving, and facilitating cloud billing solution setup and interaction with local systems, ensuring corporate and legal compliance, and also creating and maintaining high and low level documentation. Delivering projects under tight deadlines in a fast-paced, client-oriented environment.
@@ -113,5 +113,6 @@ Coding: Python, Java, Javascript, SQL, Regex, Assembly, Springbatch / Springboot
 
 Interests:
 Art: Photography, Videography, Digital Illustration, Design
-Music: Attending concerts, Playing instruments, Recording music / audio
 
+
+Music: Attending concerts, Playing instruments, Recording music / audio
